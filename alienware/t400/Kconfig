@@ -45,7 +45,7 @@ config MAX_CPUS
 
 config CBFS_SIZE
 	hex
-	default 0m11xr1000
+	default 0x200000
 
 config ONBOARD_VGA_IS_PRIMARY
 	bool
