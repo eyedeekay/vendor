@@ -1,7 +1,7 @@
-if BOARD_LENOVO_R400
+if BOARD_ALIENWARE_R400
 
 config MAINBOARD_PART_NUMBER
 	string
-	default "ThinkPad R400"
+	default "Alienware R400"
 
 endif

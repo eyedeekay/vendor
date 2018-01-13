@@ -1,12 +1,12 @@
-if BOARD_LENOVO_X201
+if BOARD_ALIENWARE_X201
 
 config BOARD_SPECIFIC_OPTIONS # dummy
 	def_bool y
 	select SYSTEM_TYPE_LAPTOP
 	select NORTHBRIDGE_INTEL_NEHALEM
 	select SOUTHBRIDGE_INTEL_IBEXPEAK
-	select EC_LENOVO_PMH7
-	select EC_LENOVO_H8
+	select EC_ALIENWARE_PMH7
+	select EC_ALIENWARE_H8
 	select NO_UART_ON_SUPERIO
 	select HAVE_OPTION_TABLE
 	select HAVE_CMOS_DEFAULT
@@ -16,16 +16,16 @@ config BOARD_SPECIFIC_OPTIONS # dummy
 	select HAVE_ACPI_RESUME
 	select MAINBOARD_HAS_NATIVE_VGA_INIT
 	select SUPERIO_NSC_PC87382
-	select DRIVERS_LENOVO_WACOM
+	select DRIVERS_ALIENWARE_WACOM
 	select MAINBOARD_HAS_LPC_TPM
 
 config MAINBOARD_DIR
 	string
-	default lenovo/x201
+	default alienware/x201
 
 config MAINBOARD_PART_NUMBER
 	string
-	default "ThinkPad X201"
+	default "Alienware X201"
 
 config MMCONF_BASE_ADDRESS
 	hex

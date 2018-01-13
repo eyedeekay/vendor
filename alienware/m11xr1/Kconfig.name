@@ -1,0 +1,2 @@
+config BOARD_ALIENWARE_M11XR1
+	bool "Alienware M11XR1 / M11XR1t"

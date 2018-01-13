@@ -1,0 +1,2 @@
+config BOARD_ALIENWARE_X201
+	bool "Alienware X201 / X201s / X201t"

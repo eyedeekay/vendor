@@ -1,2 +1,2 @@
-config BOARD_LENOVO_T500
-	bool "ThinkPad T500"
+config BOARD_ALIENWARE_T500
+	bool "Alienware T500"

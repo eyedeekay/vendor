@@ -1,16 +1,16 @@
-if VENDOR_LENOVO
+if VENDOR_ALIENWARE
 
 choice
 	prompt "Mainboard model"
 
-source "src/mainboard/lenovo/*/Kconfig.name"
+source "src/mainboard/alienware/*/Kconfig.name"
 
 endchoice
 
-source "src/mainboard/lenovo/*/Kconfig"
+source "src/mainboard/alienware/*/Kconfig"
 
 config MAINBOARD_VENDOR
 	string
-	default "LENOVO"
+	default "ALIENWARE"
 
-endif # VENDOR_LENOVO
+endif # VENDOR_ALIENWARE
