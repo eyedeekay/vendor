@@ -1,2 +1,0 @@
-config BOARD_ALIENWARE_R400
-	bool "Alienware R400"

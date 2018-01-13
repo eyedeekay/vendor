@@ -1,0 +1,2 @@
+config BOARD_ALIENWARE_M15XR1
+	bool "Alienware M15XR1"

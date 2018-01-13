@@ -1,2 +1,0 @@
-config BOARD_ALIENWARE_T500
-	bool "Alienware T500"

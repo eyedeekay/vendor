@@ -1,7 +1,0 @@
-if BOARD_ALIENWARE_R400
-
-config MAINBOARD_PART_NUMBER
-	string
-	default "Alienware R400"
-
-endif

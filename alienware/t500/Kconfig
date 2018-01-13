@@ -1,7 +1,0 @@
-if BOARD_ALIENWARE_T500
-
-config MAINBOARD_PART_NUMBER
-	string
-	default "Alienware T500"
-
-endif

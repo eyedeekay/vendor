@@ -1,4 +1,4 @@
-if BOARD_ALIENWARE_T400 || BOARD_ALIENWARE_T500 || BOARD_ALIENWARE_R400
+if BOARD_ALIENWARE_M15XR1 || BOARD_ALIENWARE_M15XR1 || BOARD_ALIENWARE_M15XR1
 
 config BOARD_SPECIFIC_OPTIONS # dummy
 	def_bool y
@@ -25,13 +25,13 @@ config BOARD_SPECIFIC_OPTIONS # dummy
 
 config MAINBOARD_DIR
 	string
-	default alienware/t400
+	default alienware/m15xr1
 
-if BOARD_ALIENWARE_T400
+if BOARD_ALIENWARE_M15XR1
 
 config MAINBOARD_PART_NUMBER
 	string
-	default "Alienware T400"
+	default "Alienware M15XR1"
 
 endif
 
@@ -51,4 +51,4 @@ config ONBOARD_VGA_IS_PRIMARY
 	bool
 	default y
 
-endif # BOARD_ALIENWARE_T400
+endif # BOARD_ALIENWARE_M15XR1
