@@ -1,2 +1,2 @@
-config BOARD_ALIENWARE_X201
-	bool "Alienware X201 / X201s / X201t"
+config BOARD_ALIENWARE_M11XR2
+	bool "Alienware M11XR2 / M11XR2s / M11XR2t"

@@ -1,4 +1,4 @@
-if BOARD_ALIENWARE_X201
+if BOARD_ALIENWARE_M11XR2
 
 config BOARD_SPECIFIC_OPTIONS # dummy
 	def_bool y
@@ -21,11 +21,11 @@ config BOARD_SPECIFIC_OPTIONS # dummy
 
 config MAINBOARD_DIR
 	string
-	default alienware/x201
+	default alienware/m11xr2
 
 config MAINBOARD_PART_NUMBER
 	string
-	default "Alienware X201"
+	default "Alienware M11XR2"
 
 config MMCONF_BASE_ADDRESS
 	hex
