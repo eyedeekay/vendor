@@ -1,2 +1,2 @@
 config VENDOR_ALIENWARE
-	bool "Lenovo"
+	bool "Alienware"

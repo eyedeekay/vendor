@@ -7,7 +7,7 @@ config BOARD_GOOGLE_CANDY
 	select BOARD_GOOGLE_BASEBOARD_RAMBI
 
 config BOARD_GOOGLE_CLAPPER
-	bool "Clapper (Lenovo N20 Chromebook)"
+	bool "Clapper (Alienware N20 Chromebook)"
 	select BOARD_GOOGLE_BASEBOARD_RAMBI
 
 config BOARD_GOOGLE_ENGUARDE
@@ -15,7 +15,7 @@ config BOARD_GOOGLE_ENGUARDE
 	select BOARD_GOOGLE_BASEBOARD_RAMBI
 
 config BOARD_GOOGLE_GLIMMER
-	bool "Glimmer (Lenovo ThinkPad 11e Chromebook)"
+	bool "Glimmer (Alienware ThinkPad 11e Chromebook)"
 	select BOARD_GOOGLE_BASEBOARD_RAMBI
 
 config BOARD_GOOGLE_GNAWTY
@@ -35,7 +35,7 @@ config BOARD_GOOGLE_NINJA
 	select BOARD_GOOGLE_BASEBOARD_RAMBI
 
 config BOARD_GOOGLE_ORCO
-	bool "Orco (Lenovo 100S Chromebook)"
+	bool "Orco (Alienware 100S Chromebook)"
 	select BOARD_GOOGLE_BASEBOARD_RAMBI
 
 config BOARD_GOOGLE_QUAWKS
