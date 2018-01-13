@@ -40,6 +40,6 @@ config MAX_CPUS
 
 config CBFS_SIZE
 	hex
-	default 0m11xr1000
+	default 0x200000
 
 endif # BOARD_ALIENWARE_M11XR1
