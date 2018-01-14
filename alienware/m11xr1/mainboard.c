@@ -17,6 +17,7 @@
 #include <drivers/intel/gma/int15.h>
 //#include <drivers/lenovo/lenovo.h>
 #include <ec/compal/ene932/ec.h>
+#include "ec.h"
 
 /*static void fill_ssdt(device_t device)
 {
