@@ -26,7 +26,7 @@
 static void mainboard_init(device_t dev)
 {
 	/* Initialize the Embedded Controller */
-	alienware_ec_init();
+	alienware_m11xr1_ec_init();
 }
 
 static void mainboard_enable(device_t dev)
