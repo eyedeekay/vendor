@@ -15,12 +15,13 @@
 
 #include <device/device.h>
 #include <drivers/intel/gma/int15.h>
-#include <drivers/lenovo/lenovo.h>
+//#include <drivers/lenovo/lenovo.h>
+#include <ec/compal/ene932/ec.h>
 
-static void fill_ssdt(device_t device)
+/*static void fill_ssdt(device_t device)
 {
 	drivers_lenovo_serial_ports_ssdt_generate("\\_SB.PCI0.LPCB", 0);
-}
+}*/
 
 static void mainboard_enable(device_t dev)
 {
@@ -28,7 +29,7 @@ static void mainboard_enable(device_t dev)
 					GMA_INT15_PANEL_FIT_CENTERING,
 					GMA_INT15_BOOT_DISPLAY_DEFAULT, 2);
 
-	dev->ops->acpi_fill_ssdt_generator = fill_ssdt;
+//	dev->ops->acpi_fill_ssdt_generator = fill_ssdt;
 }
 
 struct chip_operations mainboard_ops = {
