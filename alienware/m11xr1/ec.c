@@ -22,9 +22,9 @@
 #include "ec.h"
 
 
-void parrot_ec_init(void)
+void alienware_ec_init(void)
 {
-	printk(BIOS_DEBUG, "Parrot EC Init\n");
+	printk(BIOS_DEBUG, "Alienware EC Init\n");
 
 	/* Clean up the buffers. We don't know the initial condition. */
 	kbc_cleanup_buffers();
@@ -43,7 +43,7 @@ void parrot_ec_init(void)
 		   ec_kbc_read_ob(), ec_kbc_read_ob());
 
 	/* Print the hardware revision */
-	printk(BIOS_DEBUG,"  Parrot Revision %x\n", parrot_rev());
+	printk(BIOS_DEBUG,"  Alienware Revision %x\n", alienware_rev());
 
 	/* US Keyboard */
 	ec_kbc_write_cmd(0x59);
@@ -68,8 +68,8 @@ void parrot_ec_init(void)
 }
 
 
-/* Parrot Hardware Revision */
-u8 parrot_rev(void)
+/* Alienware Hardware Revision */
+u8 alienware_rev(void)
 {
 	ec_kbc_write_cmd(0x45);
 	ec_kbc_write_ib(0x40);

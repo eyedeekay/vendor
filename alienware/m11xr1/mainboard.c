@@ -15,7 +15,6 @@
 
 #include <device/device.h>
 #include <drivers/intel/gma/int15.h>
-//#include <drivers/lenovo/lenovo.h>
 #include <ec/compal/ene932/ec.h>
 #include "ec.h"
 
@@ -24,8 +23,15 @@
 	drivers_lenovo_serial_ports_ssdt_generate("\\_SB.PCI0.LPCB", 0);
 }*/
 
+static void mainboard_init(device_t dev)
+{
+	/* Initialize the Embedded Controller */
+	alienware_ec_init();
+}
+
 static void mainboard_enable(device_t dev)
 {
+    dev->ops->init = mainboard_init;
 	install_intel_vga_int15_handler(GMA_INT15_ACTIVE_LFP_INT_LVDS,
 					GMA_INT15_PANEL_FIT_CENTERING,
 					GMA_INT15_BOOT_DISPLAY_DEFAULT, 2);

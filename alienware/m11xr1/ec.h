@@ -54,9 +54,9 @@
  */
 
 #ifndef __ACPI__
-extern void parrot_ec_init(void);
-u8 parrot_rev(void);
-int parrot_ec_running_ro(void);
+extern void alienware_ec_init(void);
+u8 alienware_rev(void);
+int alienware_ec_running_ro(void);
 #endif
 
 #endif // ALIENWARE_EC_H

@@ -145,11 +145,10 @@ chip northbridge/intel/gm45
 			end
 			device pci 1f.0 on # LPC bridge
 				subsystemid 0x17aa 0x20f5
-				chip ec/lenovo/pmh7
-					device pnp ff.1 on # dummy
+				chip ec/compal/ene932
+					# 60/64 KBC
+					device pnp ff.1 on # dummy address
 					end
-					register "backlight_enable" = "0x01"
-					register "dock_event_enable" = "0x01"
 				end
 
 				chip ec/lenovo/h8
@@ -188,20 +187,20 @@ chip northbridge/intel/gm45
 					register "bdc_gpio_lvl" = "0"
 				end
 
-				chip superio/nsc/pc87382
-					device pnp 164e.3 on # Digitizer
-						io 0x60 = 0x200
-						irq 0x29 = 0xb0
-						irq 0x70 = 0x5
-						irq 0xf0 = 0x82
-					end
+				#chip superio/nsc/pc87382
+					#device pnp 164e.3 on # Digitizer
+						#io 0x60 = 0x200
+						#irq 0x29 = 0xb0
+						#irq 0x70 = 0x5
+						#irq 0xf0 = 0x82
+					#end
 					# IR, not connected
-					device pnp 164e.2 off end
+					#device pnp 164e.2 off end
 					# GPIO, not connected
-					device pnp 164e.7 off end
+					#device pnp 164e.7 off end
 					# DLPC, not connected
-					device pnp 164e.19 off end
-				end
+					#device pnp 164e.19 off end
+				#end
 
 			end
 			device pci 1f.2 on # SATA/IDE 1
