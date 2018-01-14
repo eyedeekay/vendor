@@ -1,7 +1,7 @@
 /*
  * This file is part of the coreboot project.
  *
- * Copyright (C) 2007-2009 coresystems GmbH
+ * Copyright (c) 2017 Tobias Diedrich <ranma+coreboot@tdiedrich.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -14,73 +14,37 @@
  * GNU General Public License for more details.
  */
 
-/* The _PTS method (Prepare To Sleep) is called before the OS is
- * entering a sleep state. The sleep state number is passed in Arg0
- */
-
-Method(_PTS,1)
-{
-	// Call a trap so SMI can prepare for Sleep as well.
-	// TRAP(0x55)
-	\_SB.PCI0.LPCB.EC.MUTE(1)
-	\_SB.PCI0.LPCB.EC.USBP(0)
-	\_SB.PCI0.LPCB.EC.RADI(0)
-}
-
-/* The _WAK method is called on system wakeup */
-
 Method(_WAK,1)
 {
-	// CPU specific part
-
-	// Notify PCI Express slots in case a card
-	// was inserted while a sleep state was active.
-
-	// Are we going to S3?
-	If (LEqual(Arg0, 3)) {
-		// ..
-	}
-
-	// Are we going to S4?
-	If (LEqual(Arg0, 4)) {
-		// ..
-	}
-
-	// TODO: Windows XP SP2 P-State restore
-
-	// TODO: Return Arg0 as second value if S-Arg0 was entered
-	// before.
+	/* Turn on radios */
+	Store (One, GP33) /* WLBT_OFF_5# (To pin 5 of WiFi mPCIe) */
+	Store (One, GP36) /* WLBT_OFF_51# (To pin 51 of WiFi mPCIe) */
+	/* There also is RF_OFF# on pin 20, controlled by the EC */
 
 	Return(Package(){0,0})
 }
 
-/* System Bus */
-
-Scope(\_SB)
+Method(_PTS,1)
 {
-	/* This method is placed on the top level, so we can make sure it's the
-	 * first executed _INI method.
-	 */
-	Method(_INI, 0)
+	/* Turn off radios */
+	Store (Zero, GP33) /* WLBT_OFF_5# (To pin 5 of WiFi mPCIe) */
+	Store (Zero, GP36) /* WLBT_OFF_51# (To pin 51 of WiFi mPCIe) */
+	/* There also is RF_OFF# on pin 20, controlled by the EC */
+}
+
+Scope(\_SI)
+{
+	Method(_SST, 1, NotSerialized)
 	{
-		/* The DTS data in NVS is probably not up to date.
-		 * Update temperature values and make sure AP thermal
-		 * interrupts can happen
-		 */
-
-		// TRAP(71) // TODO
-
-		\GOS()
-
-		/* And the OS workarounds start right after we know what we're
-		 * running: Windows XP SP1 needs to have C-State coordination
-		 * enabled in SMM.
-		 */
-		If (LAnd(LEqual(OSYS, 2001), MPEN)) {
-			// TRAP(61) // TODO
+		If (LLess(Arg0, 2))
+		{
+			/* Thinkpad LED on */
+			\_SB.PCI0.LPCB.EC0.LED (Zero, 0x80)
 		}
-
-		/* SMM power state and C4-on-C3 settings need to be updated */
-		// TRAP(43) // TODO
+		Else
+		{
+			/* Thinkpad LED blinking */
+			\_SB.PCI0.LPCB.EC0.LED (Zero, 0xC0)
+		}
 	}
 }
