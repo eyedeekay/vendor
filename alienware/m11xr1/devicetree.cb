@@ -33,7 +33,7 @@ chip northbridge/intel/gm45
 		device pci 00.0 on
 			subsystemid 0x1028 0x0443
 		end # host bridge
-        device pci 01.0 on # Graphics Port
+		device pci 01.0 on # Graphics Port
 			subsystemid 0x0128 0x0443
 		end
 		device pci 02.0 on # VGA
