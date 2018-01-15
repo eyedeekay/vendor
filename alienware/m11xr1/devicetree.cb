@@ -83,23 +83,23 @@ chip northbridge/intel/gm45
 			end
 
 			device pci 1a.0 on # UHCI
-				subsystemid 0x8086 0x2937
+				subsystemid 0x0128 0x0443
 				ioapic_irq 2 INTA 0x10
 			end
 			device pci 1a.7 on # EHCI
-				subsystemid 0x8086 0x293c
+				subsystemid 0x0128 0x0443
 				ioapic_irq 2 INTC 0x12
 			end
 			device pci 1b.0 on # HD Audio
-				subsystemid 0x8086 0x293e
+				subsystemid 0x0128 0x0443
 				ioapic_irq 2 INTA 0x10
 			end
 			device pci 1c.0 on # PCIe Port #1
-				subsystemid 0x8086 0x2940 # WWAN
+				subsystemid 0x0128 0x0443 # WWAN
 				ioapic_irq 2 INTA 0x10
 			end
 			device pci 1c.1 on
-				subsystemid 0x8086 0x2942 # WLAN
+				subsystemid 0x0128 0x0443 # WLAN
 			end # PCIe Port #2
 			device pci 1c.4 on
 				subsystemid 0x0128 0x0443 # Expresscard

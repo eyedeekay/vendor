@@ -1,0 +1,16 @@
+    serial: 7RNG4Q1
+       serial: .7RNG4Q1.CN1296103N00E8.
+          capabilities: pci pnp upgrade shadowing escd cdboot bootselect edd int5printscreen int9keyboard int14serial int17printer int10video acpi usb smartbattery biosbootspecification netboot
+             serial: CF220C6C
+             serial: C0220C6B
+                serial: 00:26:b9:c0:8c:e9
+                serial: 50:b7:c3:54:72:70
+        *-serial
+             serial: S1D5NSAF280321Z
+                serial: ab72c4cf-e6c5-4397-8ef2-3672a42a1aa0
+                   serial: 8daeda41-4e6f-4bc9-9783-7f00a8c8f031
+       serial: 82:c0:cf:d6:e9:37
+       serial: 2a:a1:1b:1e:a9:32
+       serial: fe:4b:e5:39:b2:c3
+       serial: 02:42:f1:60:d3:e2
+       serial: f6:d5:d8:68:b6:af

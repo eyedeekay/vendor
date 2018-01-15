@@ -151,7 +151,7 @@ f0: 00 00 00 00 88 85 40 00 86 0f 04 00 0a 17 02 20
 		Flags: PMEClk- DSI- D1- D2- AuxCurrent=55mA PME(D0+,D1-,D2-,D3hot+,D3cold+)
 		Status: D0 NoSoftRst- PME-Enable- DSel=0 DScale=0 PME-
 	Capabilities: [60] MSI: Enable+ Count=1/1 Maskable- 64bit+
-		Address: 00000000fee0300c  Data: 4153
+		Address: 00000000fee0300c  Data: 4124
 	Capabilities: [70] Express (v1) Root Complex Integrated Endpoint, MSI 00
 		DevCap:	MaxPayload 128 bytes, PhantFunc 0
 			ExtTag- RBE-
@@ -184,7 +184,7 @@ f0: 00 00 00 00 88 85 40 00 86 0f 04 00 0a 17 02 20
 30: 00 00 00 00 50 00 00 00 00 00 00 00 0b 01 00 00
 40: 01 00 00 07 00 00 00 00 00 00 00 00 00 80 00 00
 50: 01 60 42 c8 00 00 00 00 00 00 00 00 00 00 00 00
-60: 05 70 81 00 0c 30 e0 fe 00 00 00 00 53 41 00 00
+60: 05 70 81 00 0c 30 e0 fe 00 00 00 00 24 41 00 00
 70: 10 00 91 00 00 00 00 10 00 08 10 00 00 00 00 00
 80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -284,7 +284,7 @@ f0: 00 00 00 00 00 00 00 00 86 0f 04 00 00 00 00 00
 		DevCtl:	Report errors: Correctable- Non-Fatal- Fatal- Unsupported-
 			RlxdOrd- ExtTag- PhantFunc- AuxPwr- NoSnoop-
 			MaxPayload 128 bytes, MaxReadReq 128 bytes
-		DevSta:	CorrErr+ UncorrErr- FatalErr- UnsuppReq- AuxPwr+ TransPend-
+		DevSta:	CorrErr- UncorrErr- FatalErr- UnsuppReq- AuxPwr+ TransPend-
 		LnkCap:	Port #2, Speed 2.5GT/s, Width x1, ASPM L0s L1, Exit Latency L0s <256ns, L1 <4us
 			ClockPM- Surprise- LLActRep+ BwNot- ASPMOptComp-
 		LnkCtl:	ASPM L0s L1 Enabled; RCB 64 bytes Disabled- CommClk+
@@ -324,7 +324,7 @@ f0: 00 00 00 00 00 00 00 00 86 0f 04 00 00 00 00 00
 10: 00 00 00 00 00 00 00 00 00 08 08 00 40 40 00 20
 20: 20 f1 20 f1 21 a0 31 a0 00 00 00 00 00 00 00 00
 30: 00 00 00 00 40 00 00 00 00 00 00 00 0b 02 04 00
-40: 10 80 41 01 00 80 00 00 00 00 11 00 11 2c 11 02
+40: 10 80 41 01 00 80 00 00 00 00 10 00 11 2c 11 02
 50: 43 00 11 30 e0 a0 08 00 c9 03 50 00 00 00 00 00
 60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -507,7 +507,7 @@ f0: 00 00 00 00 00 00 00 00 86 0f 04 00 00 00 00 00
 	Region 0: Memory at f1a04c00 (32-bit, non-prefetchable) [size=1K]
 	Capabilities: [50] Power Management version 2
 		Flags: PMEClk- DSI- D1- D2- AuxCurrent=375mA PME(D0+,D1-,D2-,D3hot+,D3cold+)
-		Status: D0 NoSoftRst- PME-Enable- DSel=0 DScale=0 PME-
+		Status: D0 NoSoftRst- PME-Enable- DSel=0 DScale=0 PME+
 	Capabilities: [58] Debug port: BAR=1 offset=00a0
 	Capabilities: [98] PCI Advanced Features
 		AFCap: TP+ FLR+
@@ -520,7 +520,7 @@ f0: 00 00 00 00 00 00 00 00 86 0f 04 00 00 00 00 00
 20: 00 00 00 00 00 00 00 00 00 00 00 00 28 10 43 04
 30: 00 00 00 00 50 00 00 00 00 00 00 00 0a 01 00 00
 40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-50: 01 58 c2 c9 00 00 00 00 0a 98 a0 20 00 00 00 00
+50: 01 58 c2 c9 00 80 00 00 0a 98 a0 20 00 00 00 00
 60: 20 20 ff 01 00 00 00 00 01 00 00 01 00 00 00 c0
 70: 00 00 df 0f 00 00 00 00 00 00 00 00 00 00 00 00
 80: 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
@@ -706,7 +706,7 @@ f0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
 		Flags: PMEClk- DSI- D1- D2- AuxCurrent=375mA PME(D0+,D1+,D2+,D3hot+,D3cold+)
 		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
 	Capabilities: [48] MSI: Enable+ Count=1/1 Maskable- 64bit+
-		Address: 00000000fee0300c  Data: 41e3
+		Address: 00000000fee0300c  Data: 4164
 	Capabilities: [58] Express (v1) Endpoint, MSI 00
 		DevCap:	MaxPayload 4096 bytes, PhantFunc 0, Latency L0s <4us, L1 unlimited
 			ExtTag- AttnBtn+ AttnInd+ PwrInd+ RBE+ FLReset- SlotPowerLimit 6.500W
@@ -722,7 +722,7 @@ f0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
 	Capabilities: [6c] Vital Product Data
 		Not readable
 	Capabilities: [100 v1] Advanced Error Reporting
-		UESta:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt+ UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
+		UESta:	DLP- SDES- TLP- FCP+ CmpltTO- CmpltAbrt+ UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
 		UEMsk:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
 		UESvrt:	DLP- SDES+ TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF+ MalfTLP+ ECRC- UnsupReq- ACSViol-
 		CESta:	RxErr+ BadTLP+ BadDLLP+ Rollover- Timeout+ NonFatalErr-
@@ -736,7 +736,7 @@ f0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
 20: 00 00 00 00 00 00 00 00 00 00 00 00 28 10 43 04
 30: 00 00 00 00 40 00 00 00 00 00 00 00 0b 01 00 00
 40: 01 48 c3 f9 08 00 00 00 05 58 81 00 0c 30 e0 fe
-50: 00 00 00 00 e3 41 00 00 10 6c 01 00 85 ff 04 05
+50: 00 00 00 00 64 41 00 00 10 6c 01 00 85 ff 04 05
 60: 00 20 13 00 11 fc 07 00 42 01 11 10 03 00 00 00
 70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 80: 00 00 00 00 69 19 62 10 00 00 00 00 00 00 00 00
@@ -857,7 +857,7 @@ b0: 20 00 88 7f 0c 00 00 80 22 11 a2 00 00 00 00 00
 c0: c3 8b 38 a0 03 45 02 02 00 00 00 08 7f 50 00 30
 d0: 28 00 00 80 17 08 00 10 00 00 eb 00 ff ff a0 00
 e0: 0f cc 06 00 59 19 ff ff 00 00 10 00 02 00 00 00
-f0: 00 00 00 00 00 00 00 00 00 40 00 40 88 8c 18 80
+f0: 00 00 00 00 00 00 00 00 00 40 00 40 fa 0e 18 80
 
 1a:00.3 System peripheral [0880]: JMicron Technology Corp. MS Host Controller [197b:2383]
 	Subsystem: Dell MS Host Controller [1028:0443]
@@ -900,5 +900,5 @@ b0: 20 00 88 7f 0c 00 00 80 22 11 a2 00 00 00 00 00
 c0: c3 8b 38 a0 03 45 02 02 00 00 00 08 7f 50 00 30
 d0: 28 00 00 80 17 08 00 10 00 00 eb 00 ff ff a0 00
 e0: 0f cc 06 00 59 19 ff ff 00 00 10 00 02 00 00 00
-f0: 00 00 00 00 00 00 00 00 00 40 00 40 ff 9c 18 80
+f0: 00 00 00 00 00 00 00 00 00 40 00 40 77 98 18 80
 
