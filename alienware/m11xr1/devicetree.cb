@@ -151,57 +151,6 @@ chip northbridge/intel/gm45
 					end
 				end
 
-				chip ec/lenovo/h8
-					device pnp ff.2 on # dummy
-						io 0x60 = 0x62
-						io 0x62 = 0x66
-						io 0x64 = 0x1600
-						io 0x66 = 0x1604
-					end
-
-					register "config0" = "0xa6"
-					register "config1" = "0x04"
-					register "config2" = "0xa0"
-					register "config3" = "0x01"
-
-					register "beepmask0" = "0xfe"
-					register "beepmask1" = "0x96"
-					register "has_power_management_beeps" = "1"
-					register "has_uwb" = "1"
-
-					register "event2_enable" = "0xff"
-					register "event3_enable" = "0xff"
-					register "event4_enable" = "0xf4"
-					register "event5_enable" = "0x3c"
-					register "event6_enable" = "0x80"
-					register "event7_enable" = "0x01"
-					register "event8_enable" = "0x01"
-					register "event9_enable" = "0xff"
-					register "eventa_enable" = "0xff"
-					register "eventb_enable" = "0xff"
-					register "eventc_enable" = "0xff"
-					register "eventd_enable" = "0xff"
-
-					register "has_bdc_detection" = "1"
-					register "bdc_gpio_num" = "7"
-					register "bdc_gpio_lvl" = "0"
-				end
-
-				#chip superio/nsc/pc87382
-					#device pnp 164e.3 on # Digitizer
-						#io 0x60 = 0x200
-						#irq 0x29 = 0xb0
-						#irq 0x70 = 0x5
-						#irq 0xf0 = 0x82
-					#end
-					# IR, not connected
-					#device pnp 164e.2 off end
-					# GPIO, not connected
-					#device pnp 164e.7 off end
-					# DLPC, not connected
-					#device pnp 164e.19 off end
-				#end
-
 			end
 			device pci 1f.2 on # SATA/IDE 1
 				subsystemid 0x17aa 0x20f8
