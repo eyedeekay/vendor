@@ -1,5 +1,5 @@
 
-Bus 006 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Device Descriptor:
   bLength                18
   bDescriptorType         1
@@ -67,7 +67,7 @@ Hub Descriptor:
 Device Status:     0x0001
   Self Powered
 
-Bus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 006 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Device Descriptor:
   bLength                18
   bDescriptorType         1
@@ -131,7 +131,7 @@ Hub Descriptor:
 Device Status:     0x0001
   Self Powered
 
-Bus 003 Device 002: ID 187c:0514 Alienware Corporation 
+Bus 005 Device 002: ID 187c:0514 Alienware Corporation 
 Device Descriptor:
   bLength                18
   bDescriptorType         1
@@ -190,7 +190,7 @@ Device Descriptor:
 Device Status:     0x0000
   (Bus Powered)
 
-Bus 003 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 005 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Device Descriptor:
   bLength                18
   bDescriptorType         1
@@ -254,7 +254,7 @@ Hub Descriptor:
 Device Status:     0x0001
   Self Powered
 
-Bus 002 Device 002: ID 03f0:a107 Hewlett-Packard 
+Bus 004 Device 002: ID 03f0:a107 Hewlett-Packard 
 Device Descriptor:
   bLength                18
   bDescriptorType         1
@@ -344,7 +344,7 @@ Device Descriptor:
 Device Status:     0x0000
   (Bus Powered)
 
-Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Device Descriptor:
   bLength                18
   bDescriptorType         1
@@ -408,7 +408,7 @@ Hub Descriptor:
 Device Status:     0x0001
   Self Powered
 
-Bus 005 Device 002: ID 0c45:6424 Microdia 
+Bus 001 Device 002: ID 0c45:6424 Microdia 
 Device Descriptor:
   bLength                18
   bDescriptorType         1
@@ -871,7 +871,7 @@ Device Status:     0x0002
   (Bus Powered)
   Remote Wakeup Enabled
 
-Bus 005 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Device Descriptor:
   bLength                18
   bDescriptorType         1
@@ -935,7 +935,7 @@ Hub Descriptor:
 Device Status:     0x0001
   Self Powered
 
-Bus 001 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 003 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 Device Descriptor:
   bLength                18
   bDescriptorType         1

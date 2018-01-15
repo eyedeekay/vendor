@@ -26,8 +26,7 @@ fireaxe
           bus info: cpu@0
           version: Genuine Intel(R) CPU           U7300  @ 1.30GHz
           slot: U2E1
-          size: 1257MHz
-          capacity: 1300MHz
+          size: 1300MHz
           width: 64 bits
           clock: 200MHz
           capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx x86-64 constant_tsc arch_perfmon pebs bts rep_good nopl cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm tpr_shadow vnmi flexpriority dtherm cpufreq
@@ -92,7 +91,7 @@ fireaxe
              configuration: driver=pcieport latency=255 maxlatency=255 mingnt=255
              resources: irq:16 ioport:2000(size=4096) memory:f0000000-f10fffff ioport:be000000(size=301989888)
         *-display
-             description: VGA compatible controller
+             description: Display controller
              product: Mobile 4 Series Chipset Integrated Graphics Controller
              vendor: Intel Corporation
              physical id: 2
@@ -100,7 +99,7 @@ fireaxe
              version: 07
              width: 64 bits
              clock: 33MHz
-             capabilities: msi pm vga_controller bus_master cap_list rom
+             capabilities: msi pm bus_master cap_list rom
              configuration: driver=i915 latency=0
              resources: irq:16 memory:f1400000-f17fffff memory:d0000000-dfffffff ioport:1800(size=8) memory:c0000-dffff
         *-usb:0
@@ -284,7 +283,6 @@ fireaxe
              width: 32 bits
              clock: 33MHz
              capabilities: pci subtractive_decode bus_master cap_list
-             resources: ioport:6000(size=4096) memory:a0700000-a08fffff ioport:a0900000(size=2097152)
         *-isa
              description: ISA bridge
              product: ICH9M-E LPC Interface Controller
@@ -368,7 +366,7 @@ fireaxe
                 size: 243MiB
                 capacity: 243MiB
                 capabilities: primary bootable extended_attributes ext2 initialized
-                configuration: filesystem=ext2 lastmountpoint=/boot modified=2018-01-14 07:27:48 mount.fstype=ext2 mount.options=rw,relatime,block_validity,barrier,user_xattr,acl mounted=2018-01-14 07:27:48 state=mounted
+                configuration: filesystem=ext2 lastmountpoint=/boot modified=2018-01-15 16:16:44 mount.fstype=ext2 mount.options=rw,relatime,block_validity,barrier,user_xattr,acl mounted=2018-01-14 07:27:48 state=mounted
            *-volume:1
                 description: Extended partition
                 physical id: 2
@@ -397,14 +395,14 @@ fireaxe
   *-network:0
        description: Ethernet interface
        physical id: 2
-       logical name: vethf698e2c
+       logical name: veth77459bb
        size: 10Gbit/s
        capabilities: ethernet physical
        configuration: autonegotiation=off broadcast=yes driver=veth driverversion=1.0 duplex=full link=yes multicast=yes port=twisted pair speed=10Gbit/s
   *-network:1
        description: Ethernet interface
        physical id: 3
-       logical name: veth59e177a
+       logical name: veth0834ddf
        size: 10Gbit/s
        capabilities: ethernet physical
        configuration: autonegotiation=off broadcast=yes driver=veth driverversion=1.0 duplex=full link=yes multicast=yes port=twisted pair speed=10Gbit/s
@@ -417,14 +415,14 @@ fireaxe
   *-network:3
        description: Ethernet interface
        physical id: 5
-       logical name: veth9af84e4
+       logical name: veth595cd71
        size: 10Gbit/s
        capabilities: ethernet physical
        configuration: autonegotiation=off broadcast=yes driver=veth driverversion=1.0 duplex=full link=yes multicast=yes port=twisted pair speed=10Gbit/s
   *-network:4
        description: Ethernet interface
        physical id: 6
-       logical name: vethe952112
+       logical name: veth1a8a7a1
        size: 10Gbit/s
        capabilities: ethernet physical
        configuration: autonegotiation=off broadcast=yes driver=veth driverversion=1.0 duplex=full link=yes multicast=yes port=twisted pair speed=10Gbit/s
