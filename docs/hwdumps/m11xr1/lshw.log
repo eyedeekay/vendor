@@ -5,7 +5,6 @@ fireaxe
     version: A01
     width: 64 bits
     capabilities: smbios-2.4 dmi-2.4 smp vsyscall32
-    configuration: boot=normal chassis=portable family=Phantom sku=Null uuid=44454C4C-5200-104E-8047-B7C04F345131
   *-core
        description: Motherboard
        product: 0VWGCV
@@ -27,7 +26,7 @@ fireaxe
           bus info: cpu@0
           version: Genuine Intel(R) CPU           U7300  @ 1.30GHz
           slot: U2E1
-          size: 1299MHz
+          size: 1257MHz
           capacity: 1300MHz
           width: 64 bits
           clock: 200MHz
