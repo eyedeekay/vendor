@@ -14,11 +14,12 @@
  * GNU General Public License for more details.
  */
 
-#define THINKPAD_EC_GPE 17
+#define ALIENWARE_EC_GPE 17
 #define BRIGHTNESS_UP \_SB.PCI0.GFX0.INCB
 #define BRIGHTNESS_DOWN \_SB.PCI0.GFX0.DECB
 #define ACPI_VIDEO_DEVICE \_SB.PCI0.GFX0
 #define DISPLAY_DEVICE_2_IS_LCD_SCREEN 1
+//#define
 
 DefinitionBlock(
 	"dsdt.aml",
@@ -29,7 +30,11 @@ DefinitionBlock(
 	0x20090419	// OEM revision
 )
 {
-	// Some generic macros
+
+    // Motherboard variables
+    #include "acpi/mainboard.asl"
+
+    // Platform Configuration
 	#include "acpi/platform.asl"
 
 	// global NVS and variables

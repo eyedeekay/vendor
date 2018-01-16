@@ -30,13 +30,13 @@ Scope (_GPE)
 		ShiftLeft (Arg0, Arg1, Local0)
 		Not( ShiftLeft (One, Arg1), Local1)
 		Or (Local0, And (Local1, PDET), PDET)
-		If (LEqual (PDET, Zero)) {
+		/*If (LEqual (PDET, Zero)) {
 			// Palm removed
 			\_SB.PCI0.LPCB.EC0.HKEY.MHKQ (0x60B1)
 		} Else {
 			// Palm detected
 			\_SB.PCI0.LPCB.EC0.HKEY.MHKQ (0x60B0)
-		}
+		}*/
 	}
 
 	/* Palm detect sensor 1 */

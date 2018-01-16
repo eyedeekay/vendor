@@ -1,7 +1,8 @@
 /*
  * This file is part of the coreboot project.
  *
- * Copyright (C) 2012 secunet Security Networks AG
+ * Copyright (C) 2007-2009 coresystems GmbH
+ * Copyright (C) 2011 Google Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,72 +14,76 @@
  * GNU General Public License for more details.
  */
 
-#include <arch/io.h>
+#include <types.h>
+#include <string.h>
 #include <device/device.h>
+#include <device/pci_def.h>
+#include <device/pci_ops.h>
 #include <console/console.h>
 #include <drivers/intel/gma/int15.h>
-#include <ec/acpi/ec.h>
-//#include <ec/compal/ene932/ec.h>
-#include <string.h>
-#include <smbios.h>
-#include "ec.h"
-
+//#include <pc80/mc146818rtc.h>
 #include <arch/acpi.h>
+#include <arch/io.h>
+#include <arch/interrupt.h>
+//#include <boot/coreboot_tables.h>
+#include "onboard.h"
+#include "ec.h"
+#include <smbios.h>
+#include <device/pci.h>
+#include <ec/compal/ene932/ec.h>
 
-static u8 mainboard_fill_ec_version(char *buf, u8 buf_len)
+void mainboard_suspend_resume(void)
 {
-	u8 i, c;
-	char str[16 + 1]; /* 16 ASCII chars + \0 */
+	/* Enable ACPI mode before OS resume */
+	outb(0xe1, 0xb2);
+}
 
-	/* Build ID */
-	for (i = 0; i < 8; i++) {
-		c = ec_mm_read(0xf0 + i);
-		if (c < 0x20 || c > 0x7f) {
-			i = snprintf(str, sizeof(str), "*INVALID");
-			break;
-		}
-		str[i] = c;
+
+static void mainboard_init(device_t dev)
+{
+	/* Initialize the Embedded Controller */
+	m11xr1_ec_init();
+}
+
+static int m11xr1_onboard_smbios_data(device_t dev, int *handle,
+				     unsigned long *current)
+{
+	int len = 0;
+	u8 hardware_version = m11xr1_rev();
+	if (hardware_version < 0x2) {		/* DVT vs PVT */
+		len += smbios_write_type41(
+			current, handle,
+			BOARD_TRACKPAD_NAME,		/* name */
+			BOARD_TRACKPAD_IRQ_DVT,		/* instance */
+			0,				/* segment */
+			BOARD_TRACKPAD_I2C_ADDR,	/* bus */
+			0,				/* device */
+			0);				/* function */
+	} else {
+		len += smbios_write_type41(
+			current, handle,
+			BOARD_TRACKPAD_NAME,		/* name */
+			BOARD_TRACKPAD_IRQ_PVT,		/* instance */
+			0,				/* segment */
+			BOARD_TRACKPAD_I2C_ADDR,	/* bus */
+			0,				/* device */
+			0);				/* function */
 	}
 
-	i = MIN(buf_len, i);
-	memcpy(buf, str, i);
-
-	return i;
+	return len;
 }
 
-static void mainboard_smbios_strings(
-	struct device *dev, struct smbios_type11 *t)
-{
-	char tpec[] = "IBM ThinkPad Embedded Controller -[                 ]-";
-	u16 fwvh, fwvl;
-
-	mainboard_fill_ec_version(tpec + 35, 17);
-	t->count = smbios_add_string(t->eos, tpec);
-
-	/* Apparently byteswapped compared to H8 */
-	fwvh = ec_mm_read(0xe8);
-	fwvl = ec_mm_read(0xe9);
-
-	printk(BIOS_INFO, "EC Firmware ID %.54s, Version %d.%d%d%c\n", tpec,
-	       fwvh >> 4, fwvh & 0x0f, fwvl >> 4, 0x41 + (fwvl & 0xf));
-}
+// mainboard_enable is executed as first thing after
+// enumerate_buses().
 
 static void mainboard_enable(device_t dev)
 {
-
-    //dev->ops->init = mainboard_init;
-    dev->ops->get_smbios_strings = mainboard_smbios_strings;
-
-	install_intel_vga_int15_handler(GMA_INT15_ACTIVE_LFP_INT_LVDS,
-					GMA_INT15_PANEL_FIT_CENTERING,
-					GMA_INT15_BOOT_DISPLAY_DEFAULT, 2);
-
-    if (!acpi_is_wakeup_s3())
-		alienware_m11xr1_ec_init();
-
-//	dev->ops->acpi_fill_ssdt_generator = fill_ssdt;
+	dev->ops->init = mainboard_init;
+	dev->ops->get_smbios_data = m11xr1_onboard_smbios_data;
+	//dev->ops->acpi_inject_dsdt_generator = chromeos_dsdt_generator;
+	install_intel_vga_int15_handler(GMA_INT15_ACTIVE_LFP_EDP, GMA_INT15_PANEL_FIT_DEFAULT, GMA_INT15_BOOT_DISPLAY_DEFAULT, 0);
 }
 
 struct chip_operations mainboard_ops = {
-	.enable_dev = mainboard_enable
+	.enable_dev = mainboard_enable,
 };

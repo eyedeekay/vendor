@@ -1,7 +1,7 @@
 /*
  * This file is part of the coreboot project.
  *
- * Copyright (C) 2012 The ChromiumOS Authors.  All rights reserved.
+ * Copyright (C) 2011 The ChromiumOS Authors.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,10 +13,13 @@
  * GNU General Public License for more details.
  */
 
-/* mainboard configuration */
-#include "../ec.h"
-#define EC_SCI_GPE 23      // GPIO7 << 16 to GPE bit for Runtime SCI
+#ifndef M11XR1_ONBOARD_H
+#define M11XR1_ONBOARD_H
 
-/* ACPI code for EC functions */
-//#include "../../../../ec/compal/ene932/acpi/ec.asl"
-#include <ec/compal/ene932/acpi/ec.asl>
+#define BOARD_TRACKPAD_NAME         "trackpad"
+#define BOARD_TRACKPAD_I2C_ADDR     0x67
+#define BOARD_TRACKPAD_IRQ_DVT      16
+#define BOARD_TRACKPAD_IRQ_PVT      20
+#define BOARD_TRACKPAD_WAKE_GPIO    0x1c
+
+#endif
