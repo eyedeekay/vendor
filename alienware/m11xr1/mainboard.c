@@ -19,6 +19,7 @@
 #include <drivers/intel/gma/int15.h>
 #include <ec/acpi/ec.h>
 //#include <ec/compal/ene932/ec.h>
+#include <string.h>
 #include <smbios.h>
 #include "ec.h"
 
