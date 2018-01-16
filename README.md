@@ -46,6 +46,7 @@ firmware of your own laptop as an amateur.
     * [Specifically, this project targets "Supporting a new board with the same cpu family, chipset, but different SuperIO":](https://www.coreboot.org/Developer_Manual#How_to_support_a_new_board)
   * [Flashrom web site:](https://flashrom.org)
     * [I'm using a ch341 based USB flasher:](https://www.flashrom.org/Supported_hardware#USB_Devices)
+    * [In-System Programming](https://flashrom.org/ISP)
   * [Libreboot web site:](https://libreboot.org/)
     * [Libreboot's X200 hardware dumps:](https://libreboot.org/docs/hardware/hwdumps)
   * [me_cleaner, for disabling and shrinking the Managment Engine:](https://github.com/corna/me_cleaner/)
