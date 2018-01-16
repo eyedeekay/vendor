@@ -43,10 +43,15 @@ firmware of your own laptop as an amateur.
 
   * [Obviously, the Coreboot web site:](https://coreboot.org)
     * [Web mirror of Git documentation:](https://coreboot.org/git-docs/)
+    * [Specifically, this project targets "Supporting a new board with the same cpu family, chipset, but different SuperIO"](https://www.coreboot.org/Developer_Manual#How_to_support_a_new_board)
+  * [Flashrom web site:](https://flashrom.org)
+    * [I'm using a ch341 based USB flasher](https://www.flashrom.org/Supported_hardware#USB_Devices)
   * [Libreboot web site:](https://libreboot.org/)
     * [Libreboot's X200 hardware dumps:](https://libreboot.org/docs/hardware/hwdumps)
+  * [me_cleaner, for disabling and shrinking the Managment Engine](https://github.com/corna/me_cleaner/)
+    * [Especially this flashing guide, with it's cautious backup steps:](https://github.com/corna/me_cleaner/wiki/External-flashing)
 
-## Custom Resources
+## Custom Resources: These came from me, use at your own risk, I am a reckless amateur
 
   * [My copy of the coreboot toolchain, available on Docker Hub.](https://github.com/eyedeekay/coreboot-dockerfile)
 
