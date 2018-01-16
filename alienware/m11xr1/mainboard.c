@@ -23,6 +23,8 @@
 #include <smbios.h>
 #include "ec.h"
 
+#include <arch/acpi.h>
+
 static u8 mainboard_fill_ec_version(char *buf, u8 buf_len)
 {
 	u8 i, c;
@@ -78,5 +80,5 @@ static void mainboard_enable(device_t dev)
 }
 
 struct chip_operations mainboard_ops = {
-	.enable_dev = mainboard_enable,
-;
+	.enable_dev = mainboard_enable
+};
