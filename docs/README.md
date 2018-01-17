@@ -68,3 +68,11 @@ removed all the docking code.
 A more detailed account of it is forthcoming because it turns out, there may be
 a bunch of laptops out there that could become serviceable again with some
 reasonably accessible configuration.
+
+m11xr1 BIOS is stored on 2 flash chips
+--------------------------------------
+
+### Macronix MX25L8005 flash chip
+
+### Winbond 25Q16 flash chip
+
