@@ -13,7 +13,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  */
-
+/*
 Scope (_GPE)
 {
 	Field(GPIO, ByteAcc, NoLock, Preserve)
@@ -25,3 +25,4 @@ Scope (_GPE)
 		GV04,   1,
 	}
 }
+*/

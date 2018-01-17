@@ -1,5 +1,5 @@
-#ifndef LENOVO_X200_GPIO_H
-#define LENOVO_X200_GPIO_H
+#ifndef ALIENWARE_M11XR1_GPIO_H
+#define ALIENWARE_M11XR1_GPIO_H
 
 #include <southbridge/intel/common/gpio.h>
 
@@ -283,7 +283,7 @@ const struct pch_gpio_set2 pch_gpio_set2_level = {
 	.gpio63 = GPIO_LEVEL_LOW,
 };
 
-const struct pch_gpio_map x200_gpio_map = {
+const struct pch_gpio_map m11xr1_gpio_map = {
 	.set1 = {
 		.mode      = &pch_gpio_set1_mode,
 		.direction = &pch_gpio_set1_direction,

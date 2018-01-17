@@ -40,18 +40,6 @@ Method(_WAK,1)
 		Store (Local0, \LIDS)
 		Notify (\_SB.LID0, 0x80)
 	}
-/*
-	// Increase brightness hotkey
-	Method (_Q14, 0, NotSerialized) {
-		BRIGHTNESS_UP()
-		^HKEY.MHKQ (0x1010)
-	}
 
-	// Decrease brightness hotkey
-	Method (_Q15, 0, NotSerialized) {
-		BRIGHTNESS_DOWN()
-		^HKEY.MHKQ (0x1011)
-	}
-*/
 	Return(Package(){0,0})
 }

@@ -16,9 +16,9 @@
 #ifndef M11XR1_EC_H
 #define M11XR1_EC_H
 
-#define EC_SCI_GPI      7   /* GPIO7 is EC_SCI# */
-#define EC_SMI_GPI      8   /* GPIO8 is EC_SMI# */
-#define EC_LID_GPI     15   /* GPIO15 is EC_LID_OUT# */
+#define EC_SCI_GPI     8   /* GPIO7 is EC_SCI# */
+#define EC_SMI_GPI     12   /* GPIO15 is EC_SMI# */
+#define EC_LID_GPI     11   /* GPIO11 is EC_LID_OUT# */
 
 /* EC SMI sources TODO - make defines
  * No event  80h

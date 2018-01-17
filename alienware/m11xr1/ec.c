@@ -24,7 +24,7 @@
 
 void m11xr1_ec_init(void)
 {
-	printk(BIOS_DEBUG, "Parrot EC Init\n");
+	printk(BIOS_DEBUG, "m11xr1 EC Init\n");
 
 	/* Clean up the buffers. We don't know the initial condition. */
 	kbc_cleanup_buffers();
@@ -43,7 +43,7 @@ void m11xr1_ec_init(void)
 		   ec_kbc_read_ob(), ec_kbc_read_ob());
 
 	/* Print the hardware revision */
-	printk(BIOS_DEBUG,"  Parrot Revision %x\n", m11xr1_rev());
+	printk(BIOS_DEBUG,"  m11xr1 Revision %x\n", m11xr1_rev());
 
 	/* US Keyboard */
 	ec_kbc_write_cmd(0x59);
@@ -68,7 +68,7 @@ void m11xr1_ec_init(void)
 }
 
 
-/* Parrot Hardware Revision */
+/* m11xr1 Hardware Revision */
 u8 m11xr1_rev(void)
 {
 	ec_kbc_write_cmd(0x45);
