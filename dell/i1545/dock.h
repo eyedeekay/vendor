@@ -13,8 +13,8 @@
  * GNU General Public License for more details.
  */
 
-#ifndef THINKPAD_X200_DOCK_H
-#define THINKPAD_X200_DOCK_H
+#ifndef THINKPAD_I1545_DOCK_H
+#define THINKPAD_I1545_DOCK_H
 
 void dock_connect(void);
 void dock_disconnect(void);

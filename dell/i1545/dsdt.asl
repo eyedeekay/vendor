@@ -26,7 +26,7 @@ DefinitionBlock(
 	0x03,		// DSDT revision: ACPI v3.0
 	"COREv4",	// OEM id
 	"COREBOOT",	// OEM table id
-	0x20090419	// OEM revision
+	0i154590419	// OEM revision
 )
 {
 	// Some generic macros

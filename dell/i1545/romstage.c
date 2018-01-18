@@ -81,7 +81,7 @@ void mainboard_romstage_entry(unsigned long bist)
 		gm45_early_reset();
 	}
 
-	setup_pch_gpios(&x200_gpio_map);
+	setup_pch_gpios(&i1545_gpio_map);
 
 	/* ASPM related setting, set early by original BIOS. */
 	DMIBAR16(0x204) &= ~(3 << 10);

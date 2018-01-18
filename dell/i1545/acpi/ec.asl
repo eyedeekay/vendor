@@ -1,1 +1,1 @@
-#include <ec/lenovo/h8/acpi/ec.asl>
+#include <ec/dell/h8/acpi/ec.asl>

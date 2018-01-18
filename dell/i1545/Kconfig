@@ -1,4 +1,4 @@
-if BOARD_LENOVO_X200
+if BOARD_DELL_I1545
 
 config BOARD_SPECIFIC_OPTIONS # dummy
 	def_bool y
@@ -6,8 +6,8 @@ config BOARD_SPECIFIC_OPTIONS # dummy
 	select CPU_INTEL_SOCKET_BGA956
 	select NORTHBRIDGE_INTEL_GM45
 	select SOUTHBRIDGE_INTEL_I82801IX
-	select EC_LENOVO_PMH7
-	select EC_LENOVO_H8
+	select EC_DELL_PMH7
+	select EC_DELL_H8
 	select NO_UART_ON_SUPERIO
 	select BOARD_ROMSIZE_KB_8192
 	select DRIVERS_GENERIC_IOAPIC
@@ -20,15 +20,14 @@ config BOARD_SPECIFIC_OPTIONS # dummy
 	select MAINBOARD_HAS_NATIVE_VGA_INIT
 	select INTEL_INT15
 	select SUPERIO_NSC_PC87382
-	select DRIVERS_LENOVO_WACOM
 
 config MAINBOARD_DIR
 	string
-	default lenovo/x200
+	default dell/i1545
 
 config MAINBOARD_PART_NUMBER
 	string
-	default "ThinkPad X200"
+	default "Inspiron I1545"
 
 config USBDEBUG_HCD_INDEX
 	int
@@ -42,4 +41,4 @@ config CBFS_SIZE
 	hex
 	default 0x200000
 
-endif # BOARD_LENOVO_X200
+endif # BOARD_DELL_I1545
