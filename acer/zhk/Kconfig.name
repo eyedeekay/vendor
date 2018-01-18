@@ -1,63 +1,63 @@
-config BOARD_GOOGLE_BANJO
+config BOARD_ACER_BANJO
 	bool "Banjo (Acer Chromebook 15 (CB3-531))"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_CANDY
+config BOARD_ACER_CANDY
 	bool "Candy (Dell Chromebook 11 3120)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_CLAPPER
+config BOARD_ACER_CLAPPER
 	bool "Clapper (Alienware N20 Chromebook)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_ENGUARDE
+config BOARD_ACER_ENGUARDE
 	bool "Enguarde"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_GLIMMER
-	bool "Glimmer (Alienware Alienware 11e Chromebook)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+config BOARD_ACER_GLIMMER
+	bool "Glimmer (Lenovo Lenovo 11e Chromebook)"
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_GNAWTY
-	bool "Gnawty (Acer Chromebook 11 (CB3-111/131,C730/C730E/C735))"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+config BOARD_ACER_C7DE
+	bool "C7de (Acer Aspire E11 (ES1-111m-C7DE))"
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_HELI
+config BOARD_ACER_HELI
 	bool "Heli (Haier Chromebook G2)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_KIP
+config BOARD_ACER_KIP
 	bool "Kip (HP Chromebook 11 G3 / G4 / G4 EE)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_NINJA
+config BOARD_ACER_NINJA
 	bool "Ninja (AOpen Chromebox Commercial)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_ORCO
+config BOARD_ACER_ORCO
 	bool "Orco (Alienware 100S Chromebook)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_QUAWKS
+config BOARD_ACER_QUAWKS
 	bool "Quawks (ASUS Chromebook C300)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_SQUAWKS
+config BOARD_ACER_SQUAWKS
 	bool "Squawks (ASUS Chromebook C200)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_RAMBI
-	bool "Rambi"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+config BOARD_ACER_ZHK
+	bool "Zhk"
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_SUMO
+config BOARD_ACER_SUMO
 	bool "Sumo (AOpen Chromebase Commercial)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_SWANKY
+config BOARD_ACER_SWANKY
 	bool "Swanky (Toshiba Chromebook 2)"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK
 
-config BOARD_GOOGLE_WINKY
+config BOARD_ACER_WINKY
 	bool "Winky (Samsung Chromebook 2 (XE500C12))"
-	select BOARD_GOOGLE_BASEBOARD_RAMBI
+	select BOARD_ACER_BASEBOARD_ZHK

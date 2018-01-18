@@ -1,0 +1,16 @@
+if VENDOR_ACER
+
+choice
+	prompt "Mainboard model"
+
+source "src/mainboard/acer/*/Kconfig.name"
+
+endchoice
+
+source "src/mainboard/acer/*/Kconfig"
+
+config MAINBOARD_VENDOR
+	string
+	default "ACER"
+
+endif # VENDOR_ACER

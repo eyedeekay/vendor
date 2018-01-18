@@ -51,6 +51,7 @@ firmware of your own laptop as an amateur.
     * [Libreboot's X200 hardware dumps:](https://libreboot.org/docs/hardware/hwdumps)
   * [me_cleaner, for disabling and shrinking the Managment Engine:](https://github.com/corna/me_cleaner/)
     * [Especially this flashing guide, with it's cautious backup steps:](https://github.com/corna/me_cleaner/wiki/External-flashing)
+  * [Embedded Firmware Solutions on Springerlink has some good walkthroughs especially for the FSP](https://link.springer.com/book/10.1007/978-1-4842-0070-4)
   * [This Notebookreview thread has some useful information](http://forum.notebookreview.com/threads/how-to-recover-the-m11x-from-a-bad-bios-flash.529859/)
 
 ## Custom Resources: These came from me, use at your own risk, I am a reckless amateur

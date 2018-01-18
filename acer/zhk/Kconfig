@@ -1,5 +1,5 @@
 
-config BOARD_GOOGLE_BASEBOARD_RAMBI
+config BOARD_ACER_BASEBOARD_ZHK
 	def_bool n
 	select SOC_INTEL_BAYTRAIL
 	select EC_GOOGLE_CHROMEEC
@@ -12,7 +12,7 @@ config BOARD_GOOGLE_BASEBOARD_RAMBI
 	select MAINBOARD_HAS_LPC_TPM
 	select SYSTEM_TYPE_LAPTOP if !BOARD_GOOGLE_NINJA && !BOARD_GOOGLE_SUMO
 
-if BOARD_GOOGLE_BASEBOARD_RAMBI
+if BOARD_ACER_BASEBOARD_ZHK
 
 config VBOOT
 	select EC_GOOGLE_CHROMEEC_SWITCHES
@@ -21,84 +21,84 @@ config VBOOT
 
 config MAINBOARD_DIR
 	string
-	default google/rambi
+	default acer/zhk
 
 config VARIANT_DIR
 	string
-	default "banjo" if BOARD_GOOGLE_BANJO
-	default "candy" if BOARD_GOOGLE_CANDY
-	default "clapper" if BOARD_GOOGLE_CLAPPER
-	default "enguarde" if BOARD_GOOGLE_ENGUARDE
-	default "glimmer" if BOARD_GOOGLE_GLIMMER
-	default "gnawty" if BOARD_GOOGLE_GNAWTY
-	default "heli" if BOARD_GOOGLE_HELI
-	default "kip" if BOARD_GOOGLE_KIP
-	default "ninja" if BOARD_GOOGLE_NINJA
-	default "orco" if BOARD_GOOGLE_ORCO
-	default "quawks" if BOARD_GOOGLE_QUAWKS
-	default "rambi" if BOARD_GOOGLE_RAMBI
-	default "squawks" if BOARD_GOOGLE_SQUAWKS
-	default "sumo" if BOARD_GOOGLE_SUMO
-	default "swanky" if BOARD_GOOGLE_SWANKY
-	default "winky" if BOARD_GOOGLE_WINKY
+	default "banjo" if BOARD_ACER_BANJO
+	default "candy" if BOARD_ACER_CANDY
+	default "clapper" if BOARD_ACER_CLAPPER
+	default "enguarde" if BOARD_ACER_ENGUARDE
+	default "glimmer" if BOARD_ACER_GLIMMER
+	default "c7de" if BOARD_ACER_C7DE
+	default "heli" if BOARD_ACER_HELI
+	default "kip" if BOARD_ACER_KIP
+	default "ninja" if BOARD_ACER_NINJA
+	default "orco" if BOARD_ACER_ORCO
+	default "quawks" if BOARD_ACER_QUAWKS
+	default "zhk" if BOARD_ACER_ZHK
+	default "squawks" if BOARD_ACER_SQUAWKS
+	default "sumo" if BOARD_ACER_SUMO
+	default "swanky" if BOARD_ACER_SWANKY
+	default "winky" if BOARD_ACER_WINKY
 
 config MAINBOARD_PART_NUMBER
 	string
-	default "Banjo" if BOARD_GOOGLE_BANJO
-	default "Candy" if BOARD_GOOGLE_CANDY
-	default "Clapper" if BOARD_GOOGLE_CLAPPER
-	default "Enguarde" if BOARD_GOOGLE_ENGUARDE
-	default "Glimmer" if BOARD_GOOGLE_GLIMMER
-	default "Gnawty" if BOARD_GOOGLE_GNAWTY
-	default "Heli" if BOARD_GOOGLE_HELI
-	default "Kip" if BOARD_GOOGLE_KIP
-	default "Ninja" if BOARD_GOOGLE_NINJA
-	default "Orco" if BOARD_GOOGLE_ORCO
-	default "Quawks" if BOARD_GOOGLE_QUAWKS
-	default "Rambi" if BOARD_GOOGLE_RAMBI
-	default "Squawks" if BOARD_GOOGLE_SQUAWKS
-	default "Sumo" if BOARD_GOOGLE_SUMO
-	default "Swanky" if BOARD_GOOGLE_SWANKY
-	default "Winky" if BOARD_GOOGLE_WINKY
+	default "Banjo" if BOARD_ACER_BANJO
+	default "Candy" if BOARD_ACER_CANDY
+	default "Clapper" if BOARD_ACER_CLAPPER
+	default "Enguarde" if BOARD_ACER_ENGUARDE
+	default "Glimmer" if BOARD_ACER_GLIMMER
+	default "C7de" if BOARD_ACER_C7DE
+	default "Heli" if BOARD_ACER_HELI
+	default "Kip" if BOARD_ACER_KIP
+	default "Ninja" if BOARD_ACER_NINJA
+	default "Orco" if BOARD_ACER_ORCO
+	default "Quawks" if BOARD_ACER_QUAWKS
+	default "Zhk" if BOARD_ACER_ZHK
+	default "Squawks" if BOARD_ACER_SQUAWKS
+	default "Sumo" if BOARD_ACER_SUMO
+	default "Swanky" if BOARD_ACER_SWANKY
+	default "Winky" if BOARD_ACER_WINKY
 
 config GBB_HWID
 	string
 	depends on CHROMEOS
-	default "BANJO TEST A-A 8843" if BOARD_GOOGLE_BANJO
-	default "CANDY TEST A-A 3347" if BOARD_GOOGLE_CANDY
-	default "CLAPPER TEST A-A 7705" if BOARD_GOOGLE_CLAPPER
-	default "ENGUARDE TEST A-A 0128" if BOARD_GOOGLE_ENGUARDE
-	default "GLIMMER TEST 8028" if BOARD_GOOGLE_GLIMMER
-	default "GNAWTY TEST A-A 3347" if BOARD_GOOGLE_GNAWTY
-	default "HELI TEST A-A 7705" if BOARD_GOOGLE_HELI
-	default "KIP TEST A-A 0128" if BOARD_GOOGLE_KIP
-	default "NINJA TEST A-A 0653" if BOARD_GOOGLE_NINJA
-	default "ORCO TEST 8028" if BOARD_GOOGLE_ORCO
-	default "QUAWKS TEST A-A 3347" if BOARD_GOOGLE_QUAWKS
-	default "RAMBI TEST A-A 0128" if BOARD_GOOGLE_RAMBI
-	default "SQUAWKS TEST A-A 7705" if BOARD_GOOGLE_SQUAWKS
-	default "SUMO TEST A-A 8843" if BOARD_GOOGLE_SUMO
-	default "SWANKY TEST A-A 0653" if BOARD_GOOGLE_SWANKY
-	default "WINKY TEST 0128" if BOARD_GOOGLE_WINKY
+	default "BANJO TEST A-A 8843" if BOARD_ACER_BANJO
+	default "CANDY TEST A-A 3347" if BOARD_ACER_CANDY
+	default "CLAPPER TEST A-A 7705" if BOARD_ACER_CLAPPER
+	default "ENGUARDE TEST A-A 0128" if BOARD_ACER_ENGUARDE
+	default "GLIMMER TEST 8028" if BOARD_ACER_GLIMMER
+	default "C7DE TEST A-A 3347" if BOARD_ACER_C7DE
+	default "HELI TEST A-A 7705" if BOARD_ACER_HELI
+	default "KIP TEST A-A 0128" if BOARD_ACER_KIP
+	default "NINJA TEST A-A 0653" if BOARD_ACER_NINJA
+	default "ORCO TEST 8028" if BOARD_ACER_ORCO
+	default "QUAWKS TEST A-A 3347" if BOARD_ACER_QUAWKS
+	default "ZHK TEST A-A 0128" if BOARD_ACER_ZHK
+	default "SQUAWKS TEST A-A 7705" if BOARD_ACER_SQUAWKS
+	default "SUMO TEST A-A 8843" if BOARD_ACER_SUMO
+	default "SWANKY TEST A-A 0653" if BOARD_ACER_SWANKY
+	default "WINKY TEST 0128" if BOARD_ACER_WINKY
 
 config DEVICETREE
 	string
-	default "variants/banjo/devicetree.cb" if BOARD_GOOGLE_BANJO
-	default "variants/candy/devicetree.cb" if BOARD_GOOGLE_CANDY
-	default "variants/clapper/devicetree.cb" if BOARD_GOOGLE_CLAPPER
-	default "variants/enguarde/devicetree.cb" if BOARD_GOOGLE_ENGUARDE
-	default "variants/glimmer/devicetree.cb" if BOARD_GOOGLE_GLIMMER
-	default "variants/gnawty/devicetree.cb" if BOARD_GOOGLE_GNAWTY
-	default "variants/heli/devicetree.cb" if BOARD_GOOGLE_HELI
-	default "variants/kip/devicetree.cb" if BOARD_GOOGLE_KIP
-	default "variants/ninja/devicetree.cb" if BOARD_GOOGLE_NINJA
-	default "variants/orco/devicetree.cb" if BOARD_GOOGLE_ORCO
-	default "variants/quawks/devicetree.cb" if BOARD_GOOGLE_QUAWKS
-	default "variants/rambi/devicetree.cb" if BOARD_GOOGLE_RAMBI
-	default "variants/squawks/devicetree.cb" if BOARD_GOOGLE_SQUAWKS
-	default "variants/sumo/devicetree.cb" if BOARD_GOOGLE_SUMO
-	default "variants/swanky/devicetree.cb" if BOARD_GOOGLE_SWANKY
-	default "variants/winky/devicetree.cb" if BOARD_GOOGLE_WINKY
+	default "variants/banjo/devicetree.cb" if BOARD_ACER_BANJO
+	default "variants/candy/devicetree.cb" if BOARD_ACER_CANDY
+	default "variants/clapper/devicetree.cb" if BOARD_ACER_CLAPPER
+	default "variants/enguarde/devicetree.cb" if BOARD_ACER_ENGUARDE
+	default "variants/glimmer/devicetree.cb" if BOARD_ACER_GLIMMER
+	default "variants/c7de/devicetree.cb" if BOARD_ACER_C7DE
+	default "variants/heli/devicetree.cb" if BOARD_ACER_HELI
+	default "variants/kip/devicetree.cb" if BOARD_ACER_KIP
+	default "variants/ninja/devicetree.cb" if BOARD_ACER_NINJA
+	default "variants/orco/devicetree.cb" if BOARD_ACER_ORCO
+	default "variants/quawks/devicetree.cb" if BOARD_ACER_QUAWKS
+	default "variants/zhk/devicetree.cb" if BOARD_ACER_ZHK
+	default "variants/squawks/devicetree.cb" if BOARD_ACER_SQUAWKS
+	default "variants/sumo/devicetree.cb" if BOARD_ACER_SUMO
+	default "variants/swanky/devicetree.cb" if BOARD_ACER_SWANKY
+	default "variants/winky/devicetree.cb" if BOARD_ACER_WINKY
 
 config EC_GOOGLE_CHROMEEC_BOARDNAME
 	string
@@ -116,4 +116,4 @@ config HAVE_ME_BIN
 	bool
 	default n
 
-endif # BOARD_GOOGLE_BASEBOARD_RAMBI
+endif # BOARD_ACER_BASEBOARD_ZHK
