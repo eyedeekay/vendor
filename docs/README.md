@@ -72,7 +72,12 @@ reasonably accessible configuration.
 m11xr1 BIOS is stored on 2 flash chips
 --------------------------------------
 
-### Macronix MX25L8005 flash chip
-
 ### Winbond 25Q16 flash chip
 
+This is a 16MB flash chip that definitely contains at least part of the BIOS,
+possibly all of it.
+
+### Macronix MX25L8005 flash chip
+
+This might be the CMOS. But I may have a BIOS stored on two chips too. We'll
+just have to see.
