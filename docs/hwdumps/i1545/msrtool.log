@@ -1,4 +1,4 @@
-syntax: msrtool [-hvqrkl] [-c cpu] [-m system] [-t target ...]
+syntax: ./prebuilt/msrtool [-hvqrkl] [-c cpu] [-m system] [-t target ...]
 	 [-i addr=hi[:]lo] | [-s file] | [-d [:]file] | addr...
   -h	 show this help text
   -v	 be verbose
