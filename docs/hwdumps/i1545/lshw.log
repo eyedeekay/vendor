@@ -1,70 +1,77 @@
-media
+computer
     description: Portable Computer
-    product: Inspiron 1545
-    vendor: Dell Inc.
+    product: M11x (Null)
+    vendor: Alienware
+    version: A01
+    serial: [REMOVED]
     width: 64 bits
-    capabilities: smbios-2.4 dmi-2.4 vsyscall32
+    capabilities: smbios-2.4 dmi-2.4 smp vsyscall32
+    configuration: boot=normal chassis=portable family=Phantom sku=Null uuid=[REMOVED]
   *-core
        description: Motherboard
-       product: 0G848F
-       vendor: Dell Inc.
+       product: 0VWGCV
+       vendor: Alienware
        physical id: 0
+       version: A01
+       serial: [REMOVED]
      *-firmware
           description: BIOS
-          vendor: Dell Inc.
-          physical id: 0
-          version: A05
-          date: 02/25/2009
-          size: 64KiB
-          capacity: 15MiB
+          vendor: Alienware
+          physical id: 1
+          version: A01
+          date: 01/20/2010
+          size: 114KiB
+          capabilities: pci pnp upgrade shadowing escd cdboot bootselect edd int5printscreen int9keyboard int14serial int17printer int10video acpi usb smartbattery biosbootspecification netboot
      *-cpu
           description: CPU
-          product: Intel(R) Celeron(R) CPU          900  @ 2.20GHz
+          product: Genuine Intel(R) CPU           U7300  @ 1.30GHz
           vendor: Intel Corp.
-          physical id: 400
+          physical id: 5
           bus info: cpu@0
-          slot: Microprocessor
-          size: 2194MHz
-          capacity: 2200MHz
+          version: Genuine Intel(R) CPU           U7300  @ 1.30GHz
+          slot: U2E1
+          size: 1300MHz
           width: 64 bits
           clock: 200MHz
-          capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss tm pbe syscall nx constant_tsc arch_perfmon pebs bts rep_good nopl cpuid aperfmperf pni dtes64 monitor ds_cpl tm2 ssse3 cx16 xtpr pdcm xsave lahf_lm dtherm cpufreq
-          configuration: cores=1 enabledcores=1 threads=1
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx x86-64 constant_tsc arch_perfmon pebs bts rep_good nopl cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 xsave lahf_lm tpr_shadow vnmi flexpriority dtherm cpufreq
         *-cache:0
              description: L1 cache
-             physical id: 700
-             size: 64KiB
-             capacity: 64KiB
-             capabilities: internal write-back data
+             physical id: 6
+             slot: L1 Cache
+             size: 32KiB
+             capacity: 32KiB
+             capabilities: asynchronous internal write-back data
              configuration: level=1
         *-cache:1
              description: L2 cache
-             physical id: 701
-             size: 1MiB
-             capacity: 1MiB
-             clock: 66MHz (15.0ns)
-             capabilities: pipeline-burst internal varies unified
+             physical id: 7
+             slot: L2 Cache
+             size: 3MiB
+             capacity: 3MiB
+             capabilities: burst internal write-back unified
              configuration: level=2
      *-memory
           description: System Memory
-          physical id: 1000
+          physical id: f
           slot: System board or motherboard
-          size: 3GiB
+          size: 4GiB
         *-bank:0
-             description: DIMM DDR Synchronous 800 MHz (1.2 ns)
-             product: M4 70T2864QZ3-CF7
-             vendor: Samsung
+             description: SODIMM Synchronous 800 MHz (1.2 ns)
+             product: NT2GC64B88B0NS-CG
+             vendor: Nanya Technology
              physical id: 0
-             slot: DIMM_A
-             size: 1GiB
+             serial: [REMOVED]
+             slot: M1
+             size: 2GiB
              width: 64 bits
              clock: 800MHz (1.2ns)
         *-bank:1
-             description: DIMM DDR Synchronous 800 MHz (1.2 ns)
-             product: HYMP125S64CP8-S6
-             vendor: Hynix Semiconductor (Hyundai Electronics)
+             description: SODIMM Synchronous 800 MHz (1.2 ns)
+             product: NT2GC64B88B0NS-CG
+             vendor: Nanya Technology
              physical id: 1
-             slot: DIMM_B
+             serial: [REMOVED]
+             slot: M2
              size: 2GiB
              width: 64 bits
              clock: 800MHz (1.2ns)
@@ -77,8 +84,20 @@ media
           version: 07
           width: 32 bits
           clock: 33MHz
-        *-display:0
-             description: VGA compatible controller
+        *-generic
+             description: Unassigned class
+             product: Illegal Vendor ID
+             vendor: Illegal Vendor ID
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: ff
+             width: 32 bits
+             clock: 66MHz
+             capabilities: bus_master vga_palette cap_list
+             configuration: driver=pcieport latency=255 maxlatency=255 mingnt=255
+             resources: irq:16 ioport:2000(size=4096) memory:f0000000-f10fffff ioport:be000000(size=301989888)
+        *-display
+             description: Display controller
              product: Mobile 4 Series Chipset Integrated Graphics Controller
              vendor: Intel Corporation
              physical id: 2
@@ -86,21 +105,9 @@ media
              version: 07
              width: 64 bits
              clock: 33MHz
-             capabilities: msi pm vga_controller bus_master cap_list rom
+             capabilities: msi pm bus_master cap_list rom
              configuration: driver=i915 latency=0
-             resources: irq:16 memory:f6c00000-f6ffffff memory:e0000000-efffffff ioport:efe8(size=8) memory:c0000-dffff
-        *-display:1 UNCLAIMED
-             description: Display controller
-             product: Mobile 4 Series Chipset Integrated Graphics Controller
-             vendor: Intel Corporation
-             physical id: 2.1
-             bus info: pci@0000:00:02.1
-             version: 07
-             width: 64 bits
-             clock: 33MHz
-             capabilities: pm bus_master cap_list
-             configuration: latency=0
-             resources: memory:f6b00000-f6bfffff
+             resources: irq:16 memory:f1400000-f17fffff memory:d0000000-dfffffff ioport:1800(size=8) memory:c0000-dffff
         *-usb:0
              description: USB controller
              product: 82801I (ICH9 Family) USB UHCI Controller #4
@@ -112,32 +119,8 @@ media
              clock: 33MHz
              capabilities: uhci bus_master cap_list
              configuration: driver=uhci_hcd latency=0
-             resources: irq:20 ioport:6f60(size=32)
+             resources: irq:16 ioport:1820(size=32)
         *-usb:1
-             description: USB controller
-             product: 82801I (ICH9 Family) USB UHCI Controller #5
-             vendor: Intel Corporation
-             physical id: 1a.1
-             bus info: pci@0000:00:1a.1
-             version: 03
-             width: 32 bits
-             clock: 33MHz
-             capabilities: uhci bus_master cap_list
-             configuration: driver=uhci_hcd latency=0
-             resources: irq:21 ioport:6f80(size=32)
-        *-usb:2
-             description: USB controller
-             product: 82801I (ICH9 Family) USB UHCI Controller #6
-             vendor: Intel Corporation
-             physical id: 1a.2
-             bus info: pci@0000:00:1a.2
-             version: 03
-             width: 32 bits
-             clock: 33MHz
-             capabilities: uhci bus_master cap_list
-             configuration: driver=uhci_hcd latency=0
-             resources: irq:22 ioport:6fa0(size=32)
-        *-usb:3
              description: USB controller
              product: 82801I (ICH9 Family) USB2 EHCI Controller #2
              vendor: Intel Corporation
@@ -148,7 +131,7 @@ media
              clock: 33MHz
              capabilities: pm debug ehci bus_master cap_list
              configuration: driver=ehci-pci latency=0
-             resources: irq:22 memory:fed1c400-fed1c7ff
+             resources: irq:19 memory:f1a04800-f1a04bff
         *-multimedia
              description: Audio device
              product: 82801I (ICH9 Family) HD Audio Controller
@@ -160,7 +143,7 @@ media
              clock: 33MHz
              capabilities: pm msi pciexpress bus_master cap_list
              configuration: driver=snd_hda_intel latency=0
-             resources: irq:26 memory:f6afc000-f6afffff
+             resources: irq:25 memory:f1a00000-f1a03fff
         *-pci:0
              description: PCI bridge
              product: 82801I (ICH9 Family) PCI Express Port 1
@@ -172,7 +155,22 @@ media
              clock: 33MHz
              capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
              configuration: driver=pcieport
-             resources: irq:16 ioport:2000(size=4096) memory:c0000000-c01fffff ioport:c0200000(size=2097152)
+             resources: irq:17 ioport:3000(size=4096) memory:f1100000-f11fffff ioport:a0000000(size=2097152)
+           *-network
+                description: Ethernet interface
+                product: AR8132 Fast Ethernet
+                vendor: Qualcomm Atheros
+                physical id: 0
+                bus info: pci@0000:02:00.0
+                logical name: eth0
+                version: c0
+                serial: [REMOVED]
+                capacity: 100Mbit/s
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress vpd bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=atl1c driverversion=1.0.1.1-NAPI latency=0 link=no multicast=yes port=twisted pair
+                resources: irq:26 memory:f1100000-f113ffff ioport:3000(size=128)
         *-pci:1
              description: PCI bridge
              product: 82801I (ICH9 Family) PCI Express Port 2
@@ -184,47 +182,22 @@ media
              clock: 33MHz
              capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
              configuration: driver=pcieport
-             resources: irq:17 ioport:3000(size=4096) memory:f6900000-f69fffff ioport:c0400000(size=2097152)
+             resources: irq:16 ioport:4000(size=4096) memory:f1200000-f12fffff ioport:a0200000(size=2097152)
            *-network
                 description: Wireless interface
-                product: BCM4312 802.11b/g LP-PHY
-                vendor: Broadcom Limited
+                product: AR9285 Wireless Network Adapter (PCI-Express)
+                vendor: Qualcomm Atheros
                 physical id: 0
-                bus info: pci@0000:0c:00.0
+                bus info: pci@0000:08:00.0
                 logical name: wlan0
                 version: 01
+                serial: [REMOVED]
                 width: 64 bits
                 clock: 33MHz
                 capabilities: pm msi pciexpress bus_master cap_list ethernet physical wireless
-                configuration: broadcast=yes driver=b43 driverversion=4.13.0-1-amd64 firmware=666.2 ip=192.168.1.98 latency=0 link=yes multicast=yes wireless=IEEE 802.11
-                resources: irq:17 memory:f69fc000-f69fffff
+                configuration: broadcast=yes driver=ath9k driverversion=4.13.0-1-amd64 firmware=N/A ip=[REMOVED] latency=0 link=yes multicast=yes wireless=IEEE 802.11
+                resources: irq:17 memory:f1200000-f120ffff
         *-pci:2
-             description: PCI bridge
-             product: 82801I (ICH9 Family) PCI Express Port 3
-             vendor: Intel Corporation
-             physical id: 1c.2
-             bus info: pci@0000:00:1c.2
-             version: 03
-             width: 32 bits
-             clock: 33MHz
-             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
-             configuration: driver=pcieport
-             resources: irq:18 ioport:d000(size=4096) memory:f6800000-f68fffff ioport:c0600000(size=2097152)
-           *-network
-                description: Ethernet interface
-                product: 88E8040 PCI-E Fast Ethernet Controller
-                vendor: Marvell Technology Group Ltd.
-                physical id: 0
-                bus info: pci@0000:09:00.0
-                logical name: enp9s0
-                version: 13
-                capacity: 100Mbit/s
-                width: 64 bits
-                clock: 33MHz
-                capabilities: pm msi pciexpress bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd autonegotiation
-                configuration: autonegotiation=on broadcast=yes driver=sky2 driverversion=1.30 latency=0 link=no multicast=yes port=twisted pair
-                resources: irq:24 memory:f68fc000-f68fffff ioport:de00(size=256)
-        *-pci:3
              description: PCI bridge
              product: 82801I (ICH9 Family) PCI Express Port 5
              vendor: Intel Corporation
@@ -235,8 +208,32 @@ media
              clock: 33MHz
              capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
              configuration: driver=pcieport
-             resources: irq:16 ioport:c000(size=4096) memory:f6600000-f67fffff ioport:f0000000(size=2097152)
-        *-usb:4
+             resources: irq:17 ioport:5000(size=4096) memory:f1300000-f13fffff ioport:a0400000(size=2097152)
+           *-generic:0
+                description: System peripheral
+                product: SD/MMC Host Controller
+                vendor: JMicron Technology Corp.
+                physical id: 0
+                bus info: pci@0000:1a:00.0
+                version: 00
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm pciexpress msi bus_master cap_list
+                configuration: driver=sdhci-pci latency=0
+                resources: irq:16 memory:f1301400-f13014ff
+           *-generic:1
+                description: System peripheral
+                product: MS Host Controller
+                vendor: JMicron Technology Corp.
+                physical id: 0.3
+                bus info: pci@0000:1a:00.3
+                version: 00
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm pciexpress msi bus_master cap_list
+                configuration: driver=jmb38x_ms latency=0
+                resources: irq:16 memory:f1301c00-f1301cff
+        *-usb:2
              description: USB controller
              product: 82801I (ICH9 Family) USB UHCI Controller #1
              vendor: Intel Corporation
@@ -247,8 +244,8 @@ media
              clock: 33MHz
              capabilities: uhci bus_master cap_list
              configuration: driver=uhci_hcd latency=0
-             resources: irq:20 ioport:6f00(size=32)
-        *-usb:5
+             resources: irq:23 ioport:1840(size=32)
+        *-usb:3
              description: USB controller
              product: 82801I (ICH9 Family) USB UHCI Controller #2
              vendor: Intel Corporation
@@ -259,8 +256,8 @@ media
              clock: 33MHz
              capabilities: uhci bus_master cap_list
              configuration: driver=uhci_hcd latency=0
-             resources: irq:21 ioport:6f20(size=32)
-        *-usb:6
+             resources: irq:19 ioport:1860(size=32)
+        *-usb:4
              description: USB controller
              product: 82801I (ICH9 Family) USB UHCI Controller #3
              vendor: Intel Corporation
@@ -271,8 +268,8 @@ media
              clock: 33MHz
              capabilities: uhci bus_master cap_list
              configuration: driver=uhci_hcd latency=0
-             resources: irq:22 ioport:6f40(size=32)
-        *-usb:7
+             resources: irq:18 ioport:1880(size=32)
+        *-usb:5
              description: USB controller
              product: 82801I (ICH9 Family) USB2 EHCI Controller #1
              vendor: Intel Corporation
@@ -283,8 +280,8 @@ media
              clock: 33MHz
              capabilities: pm debug ehci bus_master cap_list
              configuration: driver=ehci-pci latency=0
-             resources: irq:20 memory:fed1c000-fed1c3ff
-        *-pci:4
+             resources: irq:23 memory:f1a04c00-f1a04fff
+        *-pci:3
              description: PCI bridge
              product: 82801 Mobile PCI Bridge
              vendor: Intel Corporation
@@ -296,7 +293,7 @@ media
              capabilities: pci subtractive_decode bus_master cap_list
         *-isa
              description: ISA bridge
-             product: ICH9M LPC Interface Controller
+             product: ICH9M-E LPC Interface Controller
              vendor: Intel Corporation
              physical id: 1f
              bus info: pci@0000:00:1f.0
@@ -317,7 +314,8 @@ media
              clock: 66MHz
              capabilities: storage msi pm ahci_1.0 bus_master cap_list
              configuration: driver=ahci latency=0
-             resources: irq:25 ioport:6e70(size=8) ioport:6e78(size=4) ioport:6e80(size=8) ioport:6e88(size=4) ioport:6ea0(size=32) memory:fed1c800-fed1cfff
+             resources: irq:24 ioport:1818(size=8) ioport:180c(size=4) ioport:1810(size=8) ioport:1808(size=4) ioport:18a0(size=32) memory:f1a04000-f1a047ff
+        *-serial
              description: SMBus
              product: 82801I (ICH9 Family) SMBus Controller
              vendor: Intel Corporation
@@ -327,21 +325,46 @@ media
              width: 64 bits
              clock: 33MHz
              configuration: driver=i801_smbus latency=0
-             resources: irq:18 memory:f6afbf00-f6afbfff ioport:1100(size=32)
-     *-scsi:0
-          physical id: 1
+             resources: irq:19 memory:a0600000-a06000ff ioport:18c0(size=32)
+     *-generic:0 UNCLAIMED
+          description: Unassigned class
+          product: Illegal Vendor ID
+          vendor: Illegal Vendor ID
+          physical id: 0
+          bus info: pci@0000:01:00.0
+          version: ff
+          width: 32 bits
+          clock: 66MHz
+          capabilities: bus_master vga_palette cap_list
+          configuration: latency=255 maxlatency=255 mingnt=255
+          resources: memory:f0000000-f0ffffff memory:c0000000-cfffffff memory:be000000-bfffffff ioport:2000(size=128) memory:f1080000-f10fffff
+     *-generic:1
+          description: Unassigned class
+          product: Illegal Vendor ID
+          vendor: Illegal Vendor ID
+          physical id: 0.1
+          bus info: pci@0000:01:00.1
+          version: ff
+          width: 32 bits
+          clock: 66MHz
+          capabilities: bus_master vga_palette cap_list
+          configuration: driver=snd_hda_intel latency=255 maxlatency=255 mingnt=255
+          resources: irq:17 memory:f1000000-f1003fff
+     *-scsi
+          physical id: 2
           logical name: scsi0
           capabilities: emulated
         *-disk
              description: ATA Disk
-             product: HGST HTS541010A9
+             product: Samsung SSD 840
              physical id: 0.0.0
              bus info: scsi@0:0.0.0
              logical name: /dev/sda
-             version: A710
-             size: 931GiB (1TB)
+             version: BB6Q
+             serial: [REMOVED]
+             size: 111GiB (120GB)
              capabilities: partitioned partitioned:dos
-             configuration: ansiversion=5 logicalsectorsize=512 sectorsize=4096 signature=c7f6be0c
+             configuration: ansiversion=5 logicalsectorsize=512 sectorsize=512 signature=36a2d2c0
            *-volume:0
                 description: Linux filesystem partition
                 vendor: Linux
@@ -350,83 +373,65 @@ media
                 logical name: /dev/sda1
                 logical name: /boot
                 version: 1.0
+                serial: [REMOVED]
                 size: 243MiB
                 capacity: 243MiB
-                capabilities: primary bootable extended_attributes large_files ext2 initialized
-                configuration: filesystem=ext2 lastmountpoint=/boot modified=2017-12-29 00:25:50 mount.fstype=ext2 mount.options=rw,relatime,block_validity,barrier,user_xattr,acl,stripe=4 mounted=2017-12-29 00:25:50 state=mounted
+                capabilities: primary bootable extended_attributes ext2 initialized
+                configuration: filesystem=ext2 lastmountpoint=/boot modified=2018-01-17 13:08:40 mount.fstype=ext2 mount.options=rw,relatime,block_validity,barrier,user_xattr,acl mounted=2018-01-17 13:08:40 state=mounted
            *-volume:1
                 description: Extended partition
                 physical id: 2
                 bus info: scsi@0:0.0.0,2
                 logical name: /dev/sda2
-                size: 931GiB
-                capacity: 931GiB
+                size: 111GiB
+                capacity: 111GiB
                 capabilities: primary extended partitioned partitioned:extended
               *-logicalvolume
                    description: Linux filesystem partition
                    physical id: 5
                    logical name: /dev/sda5
-                   size: 931GiB
-                   capacity: 931GiB
+                   serial: [REMOVED]
+                   size: 111GiB
+                   capacity: 111GiB
                    width: 512 bits
                    capabilities: encrypted luks initialized
-                   configuration: bits=512 cipher=aes filesystem=luks hash=sha256 mode=xts-plain64 version=1
-     *-scsi:1
-          physical id: 2
-          bus info: usb@3:2
-          logical name: scsi7
-        *-disk
-             description: SCSI Disk
-             product: BUP Slim SL
-             vendor: Seagate
-             physical id: 0.0.0
-             bus info: scsi@7:0.0.0
-             logical name: /dev/sdc
-             version: 0108
-             size: 1863GiB (2TB)
-             capabilities: partitioned partitioned:dos
-             configuration: ansiversion=6 logicalsectorsize=512 sectorsize=4096 signature=225e05bf
-           *-volume
-                description: Windows NTFS volume
-                physical id: 1
-                bus info: scsi@7:0.0.0,1
-                logical name: /dev/sdc1
-                version: 3.1
-                size: 1863GiB
-                capacity: 1863GiB
-                capabilities: primary bootable ntfs initialized
-                configuration: clustersize=4096 created=2017-10-31 02:35:09 filesystem=ntfs label=Seagate Backup Plus Drive state=clean
+                   configuration: bits=512 cipher=aes filesystem=luks hash=sha1 mode=xts-plain64 version=1
   *-battery
-       product: DELL P505M94
-       vendor: Samsung SDI
+       description: Lithium Ion Battery
+       product: Alienware
+       vendor: Alienware
        physical id: 1
-       slot: Sys. Battery Bay
-       capacity: 44000mWh
-       configuration: voltage=10.8V
+       slot: System Battery Bay
+       capacity: 64530mWh
+       configuration: voltage=14.8V
   *-network:0
        description: Ethernet interface
        physical id: 2
-       logical name: veth87a2840
+       logical name: veth1766b67
+       serial: [REMOVED]
        size: 10Gbit/s
        capabilities: ethernet physical
-       configuration: autonegotiation=off broadcast=yes driver=veth driverversion=1.0 duplex=full ip=169.254.4.136 link=yes multicast=yes port=twisted pair speed=10Gbit/s
+       configuration: autonegotiation=off broadcast=yes driver=veth driverversion=1.0 duplex=full link=yes multicast=yes port=twisted pair speed=10Gbit/s
   *-network:1
        description: Ethernet interface
        physical id: 3
-       logical name: docker0
+       logical name: vethc0df9b6
+       serial: [REMOVED]
+       size: 10Gbit/s
        capabilities: ethernet physical
-       configuration: broadcast=yes driver=bridge driverversion=2.3 firmware=N/A ip=172.17.0.1 link=yes multicast=yes
+       configuration: autonegotiation=off broadcast=yes driver=veth driverversion=1.0 duplex=full link=yes multicast=yes port=twisted pair speed=10Gbit/s
   *-network:2
        description: Ethernet interface
        physical id: 4
-       logical name: veth7830eed
+       logical name: veth200b39a
+       serial: [REMOVED]
        size: 10Gbit/s
        capabilities: ethernet physical
-       configuration: autonegotiation=off broadcast=yes driver=veth driverversion=1.0 duplex=full ip=169.254.3.83 link=yes multicast=yes port=twisted pair speed=10Gbit/s
+       configuration: autonegotiation=off broadcast=yes driver=veth driverversion=1.0 duplex=full link=yes multicast=yes port=twisted pair speed=10Gbit/s
   *-network:3
        description: Ethernet interface
        physical id: 5
-       logical name: veth1ba8f44
-       size: 10Gbit/s
+       logical name: docker0
+       serial: [REMOVED]
        capabilities: ethernet physical
-       configuration: autonegotiation=off broadcast=yes driver=veth driverversion=1.0 duplex=full ip=169.254.99.232 link=yes multicast=yes port=twisted pair speed=10Gbit/s
+       configuration: broadcast=yes driver=bridge driverversion=2.3 firmware=N/A ip=[REMOVED] link=yes multicast=yes

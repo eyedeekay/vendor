@@ -1,15 +1,15 @@
 CPU: ID 0x1067a, Processor Type 0x0, Family 0x6, Model 0x17, Stepping 0xa
 Northbridge: 8086:2a40 (GL40/GS40/GM45/GS45/PM45)
-Southbridge: 8086:2919 (ICH9M)
+Southbridge: 8086:2917 (ICH9M-E)
 
 ============= GPIOS =============
 
-GPIOBASE = 0x1080 (IO)
+GPIOBASE = 0x1180 (IO)
 
-gpiobase+0x0000: 0x197e75c2 (GPIO_USE_SEL)
-gpiobase+0x0004: 0xe0c26fc2 (GP_IO_SEL)
+gpiobase+0x0000: 0x187e7ffa (GPIO_USE_SEL)
+gpiobase+0x0004: 0xe1e27ffa (GP_IO_SEL)
 gpiobase+0x0008: 0x00000000 (RESERVED)
-gpiobase+0x000c: 0xf9c44f82 (GP_LVL)
+gpiobase+0x000c: 0xe1c07ff9 (GP_LVL)
 gpiobase+0x0010: 0x00000000 (RESERVED)
 gpiobase+0x0014: 0x00000000 (RESERVED)
 gpiobase+0x0018: 0x00000000 (GPO_BLINK)
@@ -17,14 +17,14 @@ gpiobase+0x001c: 0x00000000 (GP_SER_BLINK)
 gpiobase+0x0020: 0x00080000 (GP_SB_CMDSTS)
 gpiobase+0x0024: 0x00000000 (GP_SB_DATA)
 gpiobase+0x0028: 0x00000000 (RESERVED)
-gpiobase+0x002c: 0x00000182 (GPI_INV)
-gpiobase+0x0030: 0x038300f6 (GPIO_USE_SEL2)
-gpiobase+0x0034: 0x0f55ffc0 (GP_IO_SEL2)
-gpiobase+0x0038: 0x0c55ff88 (GP_LVL2)
+gpiobase+0x002c: 0x00001b00 (GPI_INV)
+gpiobase+0x0030: 0x0313e0f6 (GPIO_USE_SEL2)
+gpiobase+0x0034: 0x0f451ff0 (GP_IO_SEL2)
+gpiobase+0x0038: 0x0f551fc6 (GP_LVL2)
 gpiobase+0x003c: 0x00000000 (RESERVED)
 
 
 
 ============= RCBA ==============
 
-Error mapping physical memory 0xfed18000[0x4000]
+Error mapping physical memory 0xfed1c000[0x4000]
