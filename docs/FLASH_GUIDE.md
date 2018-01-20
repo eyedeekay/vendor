@@ -26,3 +26,5 @@ i1545 Chips:
 ------------
 
 ### This laptop is too busy for me to freely open up right now. Probably next week.
+
+### Preliminary research on the internet suggests that it may use a KS24C02 based flash chip
