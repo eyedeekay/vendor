@@ -96,7 +96,9 @@ Note that *at this point it is likely that your code will once again build.*
 Adding the new Embedded Controller to the Kconfig
 -------------------------------------------------
 
-Configure the ENEKB932.
+The Alienware M11XR1 uses an ENE932 based Embedded Controller. Enabling it in
+the new Kconfig is simply a matter of adding that configuration line to the
+Kconfig. The option in question is **select EC_COMPAL_ENE932**.
 
 Adding the source code for the Embedded Controller
 --------------------------------------------------

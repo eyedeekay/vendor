@@ -7,8 +7,8 @@ Finding a similar board
 The Alienware M11XR1 is almost the same as the same as the Lenovo Thinkpad X200,
 except it has no superIO, and the embedded controller is an ENEKB932. The parts
 of this that use enable the ENEKB932 are adapted from the ones that enable the
-S230U. The Alienware M11XR1 doesn't have a dock either, to my knowledge, so I
-removed all the docking code. An overview of the differences can be seen in
+Acer c710. The Alienware M11XR1 doesn't have a dock either, to my knowledge, so
+I removed all the docking code. An overview of the differences can be seen in
 the file [docs/differences-overview-x200-m11xr1.diff](https://github.com/eyedeekay/vendor/blob/master/docs/differences-overview-x200-m11xr1.diff)
 
 The Dell Inspiron 1545 is another laptop which is very similar to an X200,
