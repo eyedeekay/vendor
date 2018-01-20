@@ -37,6 +37,6 @@ config MAX_CPUS
 
 config CBFS_SIZE
 	hex
-	default 0x200000
+	default ROM_SIZE
 
 endif # BOARD_ALIENWARE_M11XR1

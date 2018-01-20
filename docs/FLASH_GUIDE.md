@@ -9,7 +9,7 @@ m11xr1:
 
 #### Winbond 25Q16 flash chip
 
-This is a 16MB flash chip that definitely contains at least part of the BIOS,
+This is a 16MBit flash chip that definitely contains at least part of the BIOS,
 probably all of it.
 
 #### Macronix MX25L8005 flash chip
