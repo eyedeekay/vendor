@@ -47,13 +47,16 @@ firmware of your own laptop as an amateur.
   * [Flashrom web site:](https://flashrom.org)
     * [I'm using a ch341 based USB flasher:](https://www.flashrom.org/Supported_hardware#USB_Devices)
     * [In-System Programming](https://flashrom.org/ISP)
+  * [German tutorial which uses a ch341a to set the HAP bit on a Thinkpad. Pretty good pics of the ch341a in action.](https://github.com/patbec/ThinkPad-T560-HAP-Bit)
   * [Libreboot web site:](https://libreboot.org/)
     * [Libreboot's X200 hardware dumps:](https://libreboot.org/docs/hardware/hwdumps)
   * [me_cleaner, for disabling and shrinking the Managment Engine:](https://github.com/corna/me_cleaner/)
     * [Especially this flashing guide, with it's cautious backup steps:](https://github.com/corna/me_cleaner/wiki/External-flashing)
   * [Embedded Firmware Solutions on Springerlink has some good walkthroughs especially for the FSP](https://link.springer.com/book/10.1007/978-1-4842-0070-4)
   * [This Notebookreview thread has some useful information](http://forum.notebookreview.com/threads/how-to-recover-the-m11x-from-a-bad-bios-flash.529859/)
-  * [This is a pretty nice intro to the ch341a flasher](http://www.google.com/url?q=https://onetransistor.blogspot.com/2017/08/ch341a-mini-programmer-schematic.html&sa=U&ved=0ahUKEwiLrbv1lOPYAhUl7IMKHQK6BJ0QFggcMAI&usg=AOvVaw2xbUoMf2sjpXCObkYuxFAJ)
+  * [This is a pretty nice intro to the ch341a flasher](https://onetransistor.blogspot.com/2017/08/ch341a-mini-programmer-schematic.html)
+  * [An ME_Cleaner centric flashing procedure.](https://hardenedlinux.github.io/firmware/2016/11/17/neutralize_ME_firmware_on_sandybridge_and_ivybridge.html)
+
 
 ## Custom Resources: These came from me, use at your own risk, I am a reckless amateur
 
