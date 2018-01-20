@@ -44,6 +44,7 @@ firmware of your own laptop as an amateur.
   * [Obviously, the Coreboot web site:](https://coreboot.org)
     * [Web mirror of Git documentation:](https://coreboot.org/git-docs/)
     * [Specifically, this project targets "Supporting a new board with the same cpu family, chipset, but different SuperIO":](https://www.coreboot.org/Developer_Manual#How_to_support_a_new_board)
+  * [Chromium 2014 Firmware Summit](http://www.chromium.org/chromium-os/2014-firmware-summit)
   * [Flashrom web site:](https://flashrom.org)
     * [I'm using a ch341 based USB flasher:](https://www.flashrom.org/Supported_hardware#USB_Devices)
     * [In-System Programming](https://flashrom.org/ISP)
