@@ -103,8 +103,11 @@ Kconfig. The option in question is **select EC_COMPAL_ENE932**.
 Adding the source code for the Embedded Controller
 --------------------------------------------------
 
-Examine the most similar board that uses the ENEKB932, the S230U. Adapt it's
-EC configuration code.
+Now we'll need to track down another laptop which uses an ENE932 EC, of which
+there are a few candidates. To search for such a laptop, you can use the command
+
+        grep ENE932 $(find . -name Kconfig)
+
 
 Initializing the Embedded Controller in mainboard.c
 ---------------------------------------------------
