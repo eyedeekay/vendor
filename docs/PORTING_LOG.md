@@ -28,22 +28,22 @@ and replaced references to "Lenovo" with "Alienware" and references to "x200"
 to references to "m11xr1" which, if you wanted to take a shortcut, you could do
 like this:
 
-        sed -i 's|lenovo|alienware|g' *
-        sed -i 's|Lenovo|Alienware|g' *
-        sed -i 's|LENOVO|ALIENWARE|g' *
-        sed -i 's|thinkpad|alienware|g' *
-        sed -i 's|ThinkPad|Alienware|g' *
-        sed -i 's|THINKPAD|ALIENWARE|g' *
-        sed -i 's|x200|m11xr1|g' *
-        sed -i 's|X200|M11XR1|g' *
-        sed -i 's|lenovo|alienware|g' */*
-        sed -i 's|Lenovo|Alienware|g' */*
-        sed -i 's|LENOVO|ALIENWARE|g' */*
-        sed -i 's|thinkpad|alienware|g' */*
-        sed -i 's|ThinkPad|Alienware|g' */*
-        sed -i 's|THINKPAD|ALIENWARE|g' */*
-        sed -i 's|x200|m11xr1|g' */*
-        sed -i 's|X200|M11XR1|g' */*
+        sed -i 's|lenovo|alienware|g' Kconfig*
+        sed -i 's|Lenovo|Alienware|g' Kconfig*
+        sed -i 's|LENOVO|ALIENWARE|g' Kconfig*
+        sed -i 's|thinkpad|alienware|g' Kconfig*
+        sed -i 's|ThinkPad|Alienware|g' Kconfig*
+        sed -i 's|THINKPAD|ALIENWARE|g' Kconfig*
+        sed -i 's|x200|m11xr1|g' Kconfig*
+        sed -i 's|X200|M11XR1|g' Kconfig*
+        sed -i 's|lenovo|alienware|g' */Kconfig*
+        sed -i 's|Lenovo|Alienware|g' */Kconfig*
+        sed -i 's|LENOVO|ALIENWARE|g' */Kconfig*
+        sed -i 's|thinkpad|alienware|g' */Kconfig*
+        sed -i 's|ThinkPad|Alienware|g' */Kconfig*
+        sed -i 's|THINKPAD|ALIENWARE|g' */Kconfig*
+        sed -i 's|x200|m11xr1|g' */Kconfig*
+        sed -i 's|X200|M11XR1|g' */Kconfig*
 
 But then you'd find in the Kconfig file that you had accidentally changed the
 CBFS_SIZE default from 0x200000 to 0m11xr1000. Simply change it back. What you
@@ -65,7 +65,8 @@ much self-evident:
         select DRIVERS_LENOVO_WACOM
 
 Simply commenting out or deleting them will remove them from the system
-configuration.
+configuration. Building the firmware will probably be unsuccessful at this
+point.
 
 Removing the files related to the X200 specific peripherals
 -----------------------------------------------------------
@@ -76,7 +77,21 @@ named, simply remove dock.c and dock.h. Also make sure that acpi/superio.asl is
 empty, but do not delete it.
 
 New, remove references to these from Makefile.inc and from any #include
-statements where they appear.
+statements where they appear. You can find the include statements in files by
+doing
+
+        grep -h 'dock.h' * */*
+
+or similar.
+
+Also you'll need to remove the code for the X200 Embedded Controllers. This is
+pretty much all in the files ec.h and ec.c. Simply delete them, and set then
+remove the include statement from mainboard.c and any other files where it is
+included.
+
+Note that *at this point it is likely that your code will once again build.*
+*However, it will pretty much definitely not represent something which will*
+*work*. It will have no code to talk to the embedded controller or anything.
 
 Adding the new Embedded Controller to the Kconfig
 -------------------------------------------------
