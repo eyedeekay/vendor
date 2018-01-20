@@ -53,6 +53,7 @@ firmware of your own laptop as an amateur.
     * [Especially this flashing guide, with it's cautious backup steps:](https://github.com/corna/me_cleaner/wiki/External-flashing)
   * [Embedded Firmware Solutions on Springerlink has some good walkthroughs especially for the FSP](https://link.springer.com/book/10.1007/978-1-4842-0070-4)
   * [This Notebookreview thread has some useful information](http://forum.notebookreview.com/threads/how-to-recover-the-m11x-from-a-bad-bios-flash.529859/)
+  * [This is a pretty nice intro to the ch341a flasher](http://www.google.com/url?q=https://onetransistor.blogspot.com/2017/08/ch341a-mini-programmer-schematic.html&sa=U&ved=0ahUKEwiLrbv1lOPYAhUl7IMKHQK6BJ0QFggcMAI&usg=AOvVaw2xbUoMf2sjpXCObkYuxFAJ)
 
 ## Custom Resources: These came from me, use at your own risk, I am a reckless amateur
 
