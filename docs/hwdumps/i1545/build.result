@@ -1,20 +1,20 @@
-    CREATE     build/mainboard/dell/i1545/cbfs-file.CJxHIy.out (from src/mainboard/dell/i1545/cmos.default)
-    MICROCODE  cpu_microcode_blob.bin
-3rdparty/blobs/cpu/intel/model_1067x/microcode.bin
-    OPTION     cmos_layout.bin
-    IASL       build/dsdt.aml
+    CBFS       fallback/payload
+    CBFS       coreboot.rom
+    CBFSPRINT  coreboot.rom
 
-Intel ACPI Component Architecture
-ASL+ Optimizing Compiler version 20161222-64
-Copyright (c) 2000 - 2016 Intel Corporation
+Name                           Offset     Type           Size   Comp
+cbfs master header             0x0        cbfs header        32 none
+fallback/romstage              0x80       stage           57236 none
+cpu_microcode_blob.bin         0xe080     microcode       49152 none
+fallback/ramstage              0x1a100    stage           69650 none
+config                         0x2b180    raw               101 none
+revision                       0x2b240    raw               574 none
+cmos_layout.bin                0x2b4c0    cmos_layout      1664 none
+fallback/dsdt.aml              0x2bb80    raw             10028 none
+fallback/payload               0x2e300    payload        610304 none
+(empty)                        0xc3340    null          1296216 none
+bootblock                      0x1ffac0   bootblock         976 none
+    HOSTCC     cbfstool/ifwitool.o
+    HOSTCC     cbfstool/ifwitool (link)
 
-coreboot toolchain v1.50 October 15th, 2017
-Compiler aborting due to parser-detected syntax error(s)
-dsdt.aml      7: 
-Error    6126 - syntax error, unexpected PARSEOP_NAMESEG, expecting PARSEOP_CLOSE_PAREN and premature End-Of-File
-
-ASL Input:     dsdt.aml - 7 lines, 36941 bytes, 0 keywords
-
-Compilation complete. 1 Errors, 0 Warnings, 0 Remarks, 0 Optimizations
-src/arch/x86/Makefile.inc:385: recipe for target 'build/dsdt.aml' failed
-make: *** [build/dsdt.aml] Error 255
+Built dell/i1545 (Inspiron I1545)

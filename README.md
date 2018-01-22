@@ -57,7 +57,8 @@ firmware of your own laptop as an amateur.
   * [This Notebookreview thread has some useful information](http://forum.notebookreview.com/threads/how-to-recover-the-m11x-from-a-bad-bios-flash.529859/)
   * [This is a pretty nice intro to the ch341a flasher](https://onetransistor.blogspot.com/2017/08/ch341a-mini-programmer-schematic.html)
   * [An ME_Cleaner centric flashing procedure.](https://hardenedlinux.github.io/firmware/2016/11/17/neutralize_ME_firmware_on_sandybridge_and_ivybridge.html)
-
+  * [Bios-mods procedure for flashing modified BIOS with ch341a](https://www.bios-mods.com/forum/archive/index.php?thread-16322-3.html)
+  * [Yet another ch341 procedure](http://forum.chuwi.com/thread-2704-1-1.html)
 
 ## Custom Resources: These came from me, use at your own risk, I am a reckless amateur
 
