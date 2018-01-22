@@ -13,6 +13,6 @@
 ## GNU General Public License for more details.
 ##
 
-ramstage-y += dock.c
+#ramstage-y +=
 ramstage-y += cstates.c
 ramstage-y += blc.c

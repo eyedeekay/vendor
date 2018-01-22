@@ -38,3 +38,7 @@ flash chip, but other research suggests otherwise. Whatever it is dmidecode
 reports it's having a size of 16MB, so there's plenty of room to work with here.
 Hopefully when I crack it open and have a look it's an SOIC-8 thing that
 Flashrom supports.
+
+### SuperIO
+
+

@@ -15,11 +15,11 @@
 
 #include <device/device.h>
 #include <drivers/intel/gma/int15.h>
-#include <drivers/dell/dell.h>
+//#include <drivers/dell/dell.h>
 
 static void fill_ssdt(device_t device)
 {
-	drivers_dell_serial_ports_ssdt_generate("\\_SB.PCI0.LPCB", 0);
+	//drivers_dell_serial_ports_ssdt_generate("\\_SB.PCI0.LPCB", 0);
 }
 
 static void mainboard_enable(device_t dev)

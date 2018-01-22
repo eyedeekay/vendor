@@ -1,0 +1,20 @@
+    CREATE     build/mainboard/dell/i1545/cbfs-file.CJxHIy.out (from src/mainboard/dell/i1545/cmos.default)
+    MICROCODE  cpu_microcode_blob.bin
+3rdparty/blobs/cpu/intel/model_1067x/microcode.bin
+    OPTION     cmos_layout.bin
+    IASL       build/dsdt.aml
+
+Intel ACPI Component Architecture
+ASL+ Optimizing Compiler version 20161222-64
+Copyright (c) 2000 - 2016 Intel Corporation
+
+coreboot toolchain v1.50 October 15th, 2017
+Compiler aborting due to parser-detected syntax error(s)
+dsdt.aml      7: 
+Error    6126 - syntax error, unexpected PARSEOP_NAMESEG, expecting PARSEOP_CLOSE_PAREN and premature End-Of-File
+
+ASL Input:     dsdt.aml - 7 lines, 36941 bytes, 0 keywords
+
+Compilation complete. 1 Errors, 0 Warnings, 0 Remarks, 0 Optimizations
+src/arch/x86/Makefile.inc:385: recipe for target 'build/dsdt.aml' failed
+make: *** [build/dsdt.aml] Error 255

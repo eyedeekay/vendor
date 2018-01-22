@@ -6,13 +6,13 @@ cbfs master header             0x0        cbfs header        32 none
 fallback/romstage              0x80       stage           56660 none
 cpu_microcode_blob.bin         0xde40     microcode       49152 none
 fallback/ramstage              0x19ec0    stage           69338 none
-config                         0x2ae00    raw               244 none
-revision                       0x2af40    raw               576 none
-cmos.default                   0x2b1c0    cmos_default      256 none
-cmos_layout.bin                0x2b300    cmos_layout      1664 none
-fallback/dsdt.aml              0x2b9c0    raw             12008 none
-fallback/payload               0x2e900    payload        404224 none
-(empty)                        0x91440    null          1500248 none
+config                         0x2ae00    raw               275 none
+revision                       0x2af80    raw               574 none
+cmos.default                   0x2b200    cmos_default      256 none
+cmos_layout.bin                0x2b340    cmos_layout      1664 none
+fallback/dsdt.aml              0x2ba00    raw             12008 none
+fallback/payload               0x2e940    payload        404170 none
+(empty)                        0x91480    null          1500184 none
 bootblock                      0x1ff8c0   bootblock        1544 none
     HOSTCC     cbfstool/ifwitool.o
     HOSTCC     cbfstool/ifwitool (link)
