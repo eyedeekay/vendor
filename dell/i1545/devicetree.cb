@@ -146,8 +146,8 @@ chip northbridge/intel/gm45
 			device pci 1f.0 on # LPC bridge
 				subsystemid 0x17aa 0x20f5
 
-				chip superio/nuvoton/wpcm450
 
+				chip superio/nuvoton/wpcm450
 				end
 
 			end
